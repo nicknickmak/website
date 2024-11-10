@@ -1,0 +1,194 @@
+import React from 'react';
+
+import './AboutScreen.css';
+import Childhood_Germany from '../images/Childhood_Germany.JPG';
+import World_Music from '../images/World_Music.jpeg';
+import Robot from '../images/Robot.jpg';
+import Winners from '../images/2019-Winner.jpg';
+import TabIcon from '../images/TabIcon2.png';
+
+
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import './tabs.css';
+
+import tabHover from '../audio/tabHover.mp3';
+import tabClick from '../audio/tabClick.mp3';
+
+function play_F(file) {
+    var audio = document.createElement('audio');
+    audio.src = file;
+    audio.volume = 1;
+    document.body.appendChild(audio);
+    audio.play();
+
+    audio.onended = function () {
+        this.parentNode.removeChild(this);
+    }
+}
+
+export default function AboutScreen() {
+    return (
+        <div className="notHome ">
+
+            <div className="col-1 container content-paragraph fadein">
+
+                <Tabs>
+                    <TabList>
+                        <Tab
+                            onMouseEnter={() => play_F(tabHover)}
+                            onMouseUp={() => play_F(tabClick)}>
+                            EARLY LIFE
+                            <div className="diamond"></div>
+                            <div className="bg-expand"></div>
+                            <div className="line-expand"></div>
+                            <img className="tab-icon" src={TabIcon} alt="tab-icon" width="26"></img>
+
+                        </Tab>
+                        <Tab
+                            onMouseEnter={() => play_F(tabHover)}
+                            onMouseUp={() => play_F(tabClick)}>
+                            UNIVERSITY
+                            <div className="diamond"></div>
+                            <div className="bg-expand"></div>
+                            <div className="line-expand"></div>
+                            <img className="tab-icon" src={TabIcon} alt="tab-icon" width="26"></img>
+
+                        </Tab>
+                        <Tab
+                            onMouseEnter={() => play_F(tabHover)}
+                            onMouseUp={() => play_F(tabClick)}>
+                            PRESENT
+                            <div className="diamond"></div>
+                            <div className="bg-expand"></div>
+                            <div className="line-expand"></div>
+                            <img className="tab-icon" src={TabIcon} alt="tab-icon" width="26"></img>
+                        </Tab>
+                    </TabList>
+
+                    <TabPanel>
+                        <div className="scrollContent1" >
+                            <div className="scrollContent2">
+                                <h2 className="about-section">EARLY LIFE</h2>
+                                <p>I was born and raised in San Francisco, California with exposure to a diverse amount of culture. Through my family, I was
+                                raised with a intricate background and diverse background of martial arts.</p>
+                                <img className="float-image-left" src={Childhood_Germany} alt="10 Years Old in Germany" width="300"></img>
+
+
+                                <p>The family culture of Kung Fu in my family, came from my grandfather's inspiring legacy as an ambassador and teacher
+                                in martial arts and medicine. The legacy he left behind, includes the knowledge he instilled in many disciples currently
+                                located worldwide in countries from Germany to Singapore and Hong Kong. Among these legacies, is my father. When I was
+                                young, my father would frequently scout and invit people related to this lineage in the Kung Fu community from China and
+                                Hong Kong over to our house to teach me various Kung Fu forms. From the basics to traditional, the forms I learned would
+                                gradually expand my involvement in the community. As I developed my knowledge and experience in martial arts, I went on
+                                to achieve many accomplishments like receiving a 3rd Dan Black Belt in Hapkido to winning 1st place in an international
+                                Kung Fu competition in the Netherlands.</p>
+
+                                <img className="float-image-right" src={World_Music} alt="World Music in Ruth Asawa School of the Arts" width="300"></img>
+                                <p>For high school, I enrolled in San Francisco's Ruth Asawa School of the Arts as a World Music major. The high school I
+                                enrolled in was different from the other high schools in the San Francisco Unified School District. Unlike the other schools,
+                                SOTA offered its general education academics in the the morning, and 2-3 hours of visual/performing arts in the afternoon. My
+                                World Music department provided me a multicultural musical education in which I learned from local and international
+                                professionals. Within the years I had with the department, I refined my knowledge in musicianship and composition, while
+                                learning new skills in dance and performance.</p> <br></br>
+
+                                <img className="float-image-left" src={Robot} alt="Robot from Robotics Team I founded" width="300"></img>
+                                <p>While my high school was rich in opportunity for the arts, there was an imbalance. All the emphasis for the arts meant a
+                                lack of focus for STEM education, a career path I was interested in. To supplement my passion for Engineering at the time,
+                                I decided to start the school's <i>FIRST</i> robotics team. Initially it was difficult to find support, because no one knew
+                                about the idea I had. But when the word spread, other students with similar interests came. The team started with just me
+                                attempting to fundraise the registration fee of $6,000. Luckily, with the aid of a grant I applied for and the school's
+                                administration, I was able to begin my endeavors. Building the <img className="float-image-right" src={Winners} alt="2019 Winners of Robotics" width="300"></img>
+                                team's first year robot was tough. If it weren't for the help
+                                of the dedicated members and experienced parents, the team would not have had a functioning robot at all. While the robot did
+                                not do so well in competition the first year, it was an worthy accomplishment for the team nonetheless. In the following years,
+                                the team caught on successfully and expanded to 40+ members, becoming the largest organization in the school. From the founding
+                                team, I learned many skills from CAD, machining, Java robotics programming, electrical engineering, and business development.
+                                Currently, <a href="http://www.team5700.org/"> Team 5700: SOTA Cyberdragons</a> is thriving in the world of <i>FIRST</i> Robotics,
+                                winning San Francisco Regional 2019, winning Chezy Champs 2019 and competing in the international <i>FIRST</i> championships in
+                                Houston, Texas.</p>
+                            </div>
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className="scrollContent1" >
+                            <div className="scrollContent2">
+                                <h2 className="about-section">UNIVERSITY</h2>
+
+                                <p> For university, I was fortunate enough to be accepted into University of California, San Diego as a computer science major.
+                                For my first year, I wanted to allow myself to explore university life and discover alternative opportunities now available to me
+                                as a university student. As a result, I joined various social organizations like UCSD KASA, Sleepless Collective Dance Team, and
+                                KOTX UCSD.</p>
+
+                                <p>In Sleepless Collective, I was able to continue my passion in dance and performance that I first found in high school as a World
+                                Music major. What made Sleepless Collective unique to the other dance teams on campus was it's special emphasis in freestyle
+                                and choreography. Being one of the competitive teams as well, I was able to travel and compete with the team on stage as well.</p>
+
+                                <div className="videoWrapper">
+                                    <iframe src="https://www.youtube.com/embed/4vrvgKspZtg" title="Sleepless Collective Video" allowfullscreen></iframe>
+                                </div>
+
+                                <p>Caught up in the Korean wave, I also became a media producer staff in UCSD's K-Pop community organization, KOTX UCSD. Through KOTX,
+                                I honed my skills in Adobe Suite editing graphics and videos. Through this experience, I also developed a passion in video special
+                                effects which has changed my career path to computer graphics.</p> <br></br>
+                            </div>
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className="scrollContent1" >
+                            <div className="scrollContent2">
+                                <h2 className="about-section">PRESENT</h2>
+
+
+                                <p>With my second year of university, I decided to return to the world of STEM by joining engineering societies like IEEE, ACM, and
+                                Triton XR and applying to various staff positions to promote my involvement. In IEEE I became a project lead for it's new annual
+                                project, Robocup Soccer. In Triton XR, I became a project lead assistant so I could get more involved in the creation of virtual
+                                reality projects, a topic that has piqued my career interests.</p> <br></br>
+                            </div>
+                        </div>
+                    </TabPanel>
+                </Tabs>
+            </div >
+
+
+
+
+
+            {/* <footer className="main-footer">
+                <div className="container main-footer-container">
+
+                    <h3 className="name">Nick Mak</h3>
+
+                    <ul className="nav footer-nav">
+                        <li>
+                            <a href="https://www.youtube.com/nickmak" target="_blank">
+                                <img src="Images/youtube logo.png" width="50"></img>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/nicknickmak/" target="_blank">
+                                <img src="Images/instagram logo.png" width="50"></img>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/nick.mak.7" target="_blank">
+                                <img src="Images/facebook logo.png" width="50"></img>
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/nick-l-mak/" target="_blank">
+                                <img src="Images/linkedin logo.png" width="50"></img>
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="https://github.com/nmakucsd" target="_blank">
+                                <img src="Images/GitHub logo.png" width="50"></img>
+                            </a> 
+                        </li>
+                    </ul>
+                </div> 
+
+
+            </footer> */}
+        </div >
+    )
+}

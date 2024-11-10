@@ -1,0 +1,80 @@
+.buttonBack {
+  position: absolute;
+  top: 40vh;
+  left: 0;
+  height: 10rem;
+  width: 5rem;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(102, 102, 102, 0.24);
+  border: transparent;
+}
+.buttonBack:hover {
+  filter: brightness(150%);
+}
+
+.buttonBack img {
+  max-width: 80%;
+  transform: scaleX(-1);
+}
+
+.buttonNext {
+  position: absolute;
+  top: 40vh;
+  right: 0;
+  height: 10rem;
+  width: 5rem;
+  transition: all 0.2s ease-in-out;
+  background-color: rgba(102, 102, 102, 0.24);
+  border: transparent;
+}
+
+.buttonNext:hover {
+  filter: brightness(150%);
+}
+
+.buttonNext img {
+  max-width: 80%;
+}
+
+.carousel {
+  /* border: solid black; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 0;
+  overflow: hidden;
+  margin: 0 19px;
+}
+
+.carousel-2 {
+  border: solid black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  transition: all 0.2s ease-in-out;
+  padding-bottom: 0;
+  overflow: hidden;
+  margin: 0 19px;
+}
+.slider {
+  transition: all 0.2s ease-in-out;
+}
+
+.tray6{
+  margin-right: -1883px;
+}
+.tray7{
+  margin-right: -1877px;
+}
+.tray8{
+  margin-right: -2195px;
+}
+
+.tray-2 {
+  margin-right: -1500px;
+}
+
+.currentSlide {
+  transform: scale(120%);
+}
