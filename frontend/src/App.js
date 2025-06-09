@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import AboutScreen from "./screens/AboutScreen/AboutScreen";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
@@ -19,7 +20,15 @@ import { playAudio } from "./utils/audioUtils";
 function App() {
   const balls = [1, 2, 3, 4, 5, 6, 7, 8];
 
-  const isMobile = window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   function loadMobileApp() {
     if (!isMobile) {
@@ -36,7 +45,19 @@ function App() {
         <div className="backgroundLogo"></div>
 
         <div className="grid-container">
-          <header className="row">
+          <main>
+            <Route path="/resume" component={ResumeScreen}></Route>
+            <Route path="/about" component={AboutScreen}></Route>
+            <Route path="/inspiration" component={InspirationScreen}></Route>
+            <Route path="/experiences" component={ExperiencesScreen}></Route>
+            <Route path="/experience/:id" component={ExperienceScreen}></Route>
+            <Route path="/projects" component={ProjectsScreen}></Route>
+            <Route path="/project/:id" component={ProjectScreen}></Route>
+            <Route path="/" component={HomeScreen} exact></Route>
+
+            {/* content after header  */}
+          </main>
+          <footer className="footer-mobile row">
             <NavLink
               className="navItem"
               to="/resume"
@@ -84,28 +105,6 @@ function App() {
             >
               <div className="navButton">PROJECTS</div>
             </NavLink>
-          </header>
-          <main>
-            <Route path="/resume" component={ResumeScreen}></Route>
-            <Route path="/about" component={AboutScreen}></Route>
-            <Route path="/inspiration" component={InspirationScreen}></Route>
-            <Route path="/experiences" component={ExperiencesScreen}></Route>
-            <Route path="/experience/:id" component={ExperienceScreen}></Route>
-            <Route path="/projects" component={ProjectsScreen}></Route>
-            <Route path="/project/:id" component={ProjectScreen}></Route>
-            <Route path="/" component={HomeScreen} exact></Route>
-
-            {/* content after header  */}
-          </main>
-          <footer className="footer">
-            <div className="row center sm">
-              <a href="https://www.linkedin.com/in/nick-l-mak/" target="_blank">
-                <img className="social" src={LinkedIn} alt="LinkedIn"></img>
-              </a>
-              <a href="https://github.com/nmakucsd" target="_blank">
-                <img className="social" src={Github} alt="Github"></img>
-              </a>
-            </div>
           </footer>
         </div>
       </BrowserRouter>
@@ -187,7 +186,7 @@ function App() {
 
             {/* content after header  */}
           </main>
-          <footer className="footer">
+          <footer className="footer-desktop">
             <div className="row center sm">
               <a href="https://www.linkedin.com/in/nick-l-mak/" target="_blank">
                 <img className="social" src={LinkedIn} alt="LinkedIn"></img>

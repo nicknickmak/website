@@ -164,12 +164,25 @@ main {
   grid-area: main;
   /* padding: 5rem 1rem; */
 }
-footer {
+footer.footer-desktop {
   grid-area: footer;
   background-color: #417e96c2;
   color: #ffffff;
 }
 
+footer.footer-mobile {
+    grid-area: footer;
+    background-image: -webkit-linear-gradient(bottom,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.2) 40%,
+            rgba(255, 255, 255, 0) 90%);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-top: 1px rgb(146, 146, 146) solid;
+}
 /* Common */
 h1 {
   font-size: 1.8rem;
