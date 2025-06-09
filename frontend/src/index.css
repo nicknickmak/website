@@ -4,6 +4,32 @@ html {
 
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 }
+.mobile-browser {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "main"
+            "footer";
+    }
+
+    .backgroundLogo {
+        transform: scaleY(-1);
+    }
+}
+
+.desktop-browser {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    .backgroundLogo {
+        top: 0%;
+    }
+}
 body {
   margin: 0;
   height: 100vh;
@@ -113,18 +139,6 @@ body {
   outline: 0;
 }
 
-.mobile-browser {
-    .backgroundLogo {
-        transform: scaleY(-1);
-    }
-}
-
-.desktop-browser {
-    .backgroundLogo {
-        top: 0%;
-    }
-}
-
 .backgroundLogo {
   /* width: 20%; */
   position: absolute;
@@ -150,12 +164,7 @@ body {
   top: 0%;
   left: 0%;
   right: 0%;
-  bottom: 0%;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
+bottom: 0%;
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
