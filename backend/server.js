@@ -1,10 +1,11 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 import mongoose from 'mongoose';
 import userRouter from './routers/userRouter.js';
 import projectRouter from './routers/projectRouter.js';
 import experienceRouter from './routers/experienceRouter.js';
 
-// mongodb+srv://nicknickmak:Perp0Pikmin@cluster0.w5hm2.mongodb.net/nickmak?retryWrites=true&w=majority
 
 import path from 'path';
 
