@@ -15,19 +15,7 @@ import InspirationScreen from './screens/InspirationScreen';
 
 import LinkedIn from './images/LinkedIn.png';
 import Github from './images/Github.png';
-
-
-  function play_F(file){
-    var audio = document.createElement('audio');
-    audio.src = file;
-    audio.volume = 0.5;
-    document.body.appendChild(audio);
-    audio.play();
-    
-    audio.onended = function () {
-      this.parentNode.removeChild(this);
-    }
-  }
+import { playAudio } from './utils/audioUtils';
 
 function App() {
   return (
@@ -37,43 +25,47 @@ function App() {
 
       <div className="grid-container">
         <header className="row">
-          <NavLink className="navItem" to="/resume"
-          activeStyle={{color:"#eaeeb2", backgroundColor: "transparent"}}
-          onMouseEnter={() => play_F(hoverAudio)}
-          onMouseUp={() => play_F(downAudio)}>
+          <NavLink 
+            className="navItem" 
+            to="/resume"
+            activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
+            onMouseEnter={() => playAudio(hoverAudio)}
+            onMouseUp={() => playAudio(downAudio)}>
             <div className="navButton">RESUME</div>
           </NavLink>
-          <NavLink className="navItem" to="/about"
-          activeStyle={{color:"#eaeeb2", backgroundColor: "transparent"}}
-          onMouseEnter={() => play_F(hoverAudio)}
-          onMouseUp={() => play_F(downAudio)}>
+          <NavLink 
+            className="navItem" 
+            to="/about"
+            activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
+            onMouseEnter={() => playAudio(hoverAudio)}
+            onMouseUp={() => playAudio(downAudio)}>
             <div className="navButton">ABOUT ME</div>
           </NavLink>
-          <NavLink className="navItem navCenter" exact to="/" 
-          activeStyle={{backgroundColor: "transparent"}}
-          onMouseEnter={() => play_F(hoverAudio)}
-          onMouseUp={() => play_F(downAudio)}>
+          <NavLink 
+            className="navItem navCenter" 
+            exact to="/" 
+            activeStyle={{ backgroundColor: "transparent" }}
+            onMouseEnter={() => playAudio(hoverAudio)}
+            onMouseUp={() => playAudio(downAudio)}>
             <div className="brand" activeStyle={{opacity: "0.5px"}}></div>
             <div className="brandText">NICK MAK</div>
           </NavLink>
-          <NavLink className="navItem" to="/experiences" 
-          activeStyle={{color:"#eaeeb2", backgroundColor: "transparent"}}
-          onMouseEnter={() => play_F(hoverAudio)}
-          onMouseUp={() => play_F(downAudio)}>
+          <NavLink 
+            className="navItem" 
+            to="/experiences" 
+            activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
+            onMouseEnter={() => playAudio(hoverAudio)}
+            onMouseUp={() => playAudio(downAudio)}>
             <div className="navButton">EXPERIENCE</div>
           </NavLink>
-          <NavLink className="navItem" to="/projects" 
-          activeStyle={{color:"#eaeeb2", backgroundColor: "transparent"}}
-          onMouseEnter={() => play_F(hoverAudio)}
-          onMouseUp={() => play_F(downAudio)}>
+          <NavLink 
+            className="navItem" 
+            to="/projects" 
+            activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
+            onMouseEnter={() => playAudio(hoverAudio)}
+            onMouseUp={() => playAudio(downAudio)}>
             <div className="navButton">PROJECTS</div>
           </NavLink>
-          {/* <NavLink className="navItem" to="/inspiration"
-          activeStyle={{color:"#eaeeb2", backgroundColor: "transparent"}}
-          onMouseEnter={() => play_F(hoverAudio)}
-          onMouseUp={() => play_F(downAudio)}>
-            <div className="navButton">INSPIRATION</div>
-          </NavLink> */}
         </header>
         <main> 
           <Route path="/resume" component={ResumeScreen}></Route>
@@ -85,9 +77,8 @@ function App() {
           <Route path="/project/:id" component={ProjectScreen}></Route>
           <Route path="/" component={HomeScreen} exact></Route>
 
-
         {/* content after header  */}
-          
+
         </main>
         <footer className="footer">
           <div className="row center sm">

@@ -8,21 +8,9 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProjects } from '../actions/projectActions';
-
+import { playAudio } from '../utils/audioUtils';
 
 import './carousel.css';
-
-function play_F(file, vol) {
-    var audio = document.createElement('audio');
-    audio.src = file;
-    audio.volume = vol;
-    document.body.appendChild(audio);
-    audio.play();
-
-    audio.onended = function () {
-        this.parentNode.removeChild(this);
-    }
-}
 
 export default function ProjectsScreen() {
     const dispatch = useDispatch();
@@ -38,7 +26,7 @@ export default function ProjectsScreen() {
                 :
                 error ? <MessageBox variant="danger">{error}</MessageBox>
                     :
-                    <div className="Home fadein" onLoad={() => play_F(cardOpenAudio, 0.1)}>
+                    <div className="Home fadein" onLoad={() => playAudio(cardOpenAudio, 0.1)}>
                         <div className="col-2">
                             <div className="row center bottomline">
                                 <div className="title">PROJECTS</div>
@@ -68,10 +56,10 @@ export default function ProjectsScreen() {
                                         }
                                     </div>
                                 </Slider>
-                                <ButtonBack className="buttonBack" onMouseUp={() => play_F(cardHoverAudio, 1)}>
+                                <ButtonBack className="buttonBack" onMouseUp={() => playAudio(cardHoverAudio, 1)}>
                                     <img src="/images/right_arrow.png" alt="<"></img>
                                 </ButtonBack>
-                                <ButtonNext className="buttonNext" onMouseUp={() => play_F(cardHoverAudio, 1)}>
+                                <ButtonNext className="buttonNext" onMouseUp={() => playAudio(cardHoverAudio, 1)}>
                                     <img src="/images/right_arrow.png" alt=">"></img>
                                 </ButtonNext>
                             </CarouselProvider>

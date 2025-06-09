@@ -9,32 +9,19 @@ import TabIcon from '../images/TabIcon2.png';
 import './idea.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './tabs.css';
-
-
+import { playAudio } from '../utils/audioUtils';
 import tabHover from '../audio/tabHover.mp3';
 import tabClick from '../audio/tabClick.mp3';
-
-function play_F(file) {
-    var audio = document.createElement('audio');
-    audio.src = file;
-    audio.volume = 0.1;
-    document.body.appendChild(audio);
-    audio.play();
-
-    audio.onended = function () {
-        this.parentNode.removeChild(this);
-    }
-}
 
 export default function HomeScreen() {
     return (
         <div>
-            <div className="Home fadein" onLoad={() => play_F(cardOpenAudio)}>
+            <div className="Home fadein" onLoad={() => playAudio(cardOpenAudio)}>
                 <Tabs>
                     <TabList>
                         <Tab
-                            onMouseEnter={() => play_F(tabHover)}
-                            onMouseUp={() => play_F(tabClick)}>
+                            onMouseEnter={() => playAudio(tabHover)}
+                            onMouseUp={() => playAudio(tabClick)}>
                             DAILY DATA
                             <div className="diamond"></div>
                             <div className="bg-expand"></div>
@@ -43,8 +30,8 @@ export default function HomeScreen() {
 
                         </Tab>
                         <Tab
-                            onMouseEnter={() => play_F(tabHover)}
-                            onMouseUp={() => play_F(tabClick)}>
+                            onMouseEnter={() => playAudio(tabHover)}
+                            onMouseUp={() => playAudio(tabClick)}>
                             NEW IDEAS
                             <div className="diamond"></div>
                             <div className="bg-expand"></div>
@@ -53,8 +40,8 @@ export default function HomeScreen() {
 
                         </Tab>
                         <Tab
-                            onMouseEnter={() => play_F(tabHover)}
-                            onMouseUp={() => play_F(tabClick)}>
+                            onMouseEnter={() => playAudio(tabHover)}
+                            onMouseUp={() => playAudio(tabClick)}>
                             COMING SOON
                             <div className="diamond"></div>
                             <div className="bg-expand"></div>
