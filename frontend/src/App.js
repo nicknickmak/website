@@ -61,7 +61,7 @@ function App() {
 
               {/* content after header  */}
             </main>
-            <footer className="footer-mobile row">
+            <footer className="row">
               <NavLink
                 className="navItem"
                 to="/resume"
@@ -219,7 +219,7 @@ function App() {
 
               {/* content after header  */}
             </main>
-            <footer className="footer-desktop">
+            <footer>
               <div className="row center sm">
                 <a
                   href="https://www.linkedin.com/in/nick-l-mak/"
