@@ -113,10 +113,21 @@ body {
   outline: 0;
 }
 
+.mobile-browser {
+    .backgroundLogo {
+        transform: scaleY(-1);
+    }
+}
+
+.desktop-browser {
+    .backgroundLogo {
+        top: 0%;
+    }
+}
+
 .backgroundLogo {
   /* width: 20%; */
   position: absolute;
-  top: 0%;
   left: 0%;
   right: 0%;
   bottom: 0%;
