@@ -1,17 +1,17 @@
 import React from 'react';
-import cardOpenAudio from '../audio/cardOpen.mp3';
-import { BicepChart, SplitsChart, ShouldersChart, WaistChart } from '../components/LineCharts';
-import { WorkoutChart } from '../components/CalendarCharts';
+import cardOpenAudio from '../../audio/cardOpen.mp3';
+import { BicepChart, SplitsChart, ShouldersChart, WaistChart } from '../../components/LineCharts';
+import { WorkoutChart } from '../../components/CalendarCharts';
 
 
-import TabIcon from '../images/TabIcon2.png';
+import TabIcon from '../../images/TabIcon2.png';
 
-import './idea.css';
+import '../idea.css';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import './tabs.css';
-import { playAudio } from '../utils/audioUtils';
-import tabHover from '../audio/tabHover.mp3';
-import tabClick from '../audio/tabClick.mp3';
+import '../tabs.css';
+import { playAudio } from '../../utils/audioUtils';
+import tabHover from '../../audio/tabHover.mp3';
+import tabClick from '../../audio/tabClick.mp3';
 
 export default function HomeScreen() {
     return (

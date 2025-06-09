@@ -1,11 +1,11 @@
 
 import { BrowserRouter, NavLink, Route } from 'react-router-dom';
-import AboutScreen from './screens/AboutScreen';
-import HomeScreen from './screens/HomeScreen';
+import AboutScreen from './screens/AboutScreen/AboutScreen';
+import HomeScreen from './screens/HomeScreen/HomeScreen';
 import ProjectScreen from './screens/ProjectScreen';
-import ExperienceScreen from './screens/ExperienceScreen';
+import ExperienceScreen from './screens/ExperienceScreen/ExperienceScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
-import ExperiencesScreen from './screens/ExperiencesScreen';
+import ExperiencesScreen from './screens/ExperiencesScreen/ExperiencesScreen';
 
 import ResumeScreen from './screens/ResumeScreen';
 

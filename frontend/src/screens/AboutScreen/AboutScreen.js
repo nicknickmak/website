@@ -1,18 +1,17 @@
 import React from 'react';
 
 import './AboutScreen.css';
-import Childhood_Germany from '../images/Childhood_Germany.JPG';
-import World_Music from '../images/World_Music.jpeg';
-import Robot from '../images/Robot.jpg';
-import Winners from '../images/2019-Winner.jpg';
-import TabIcon from '../images/TabIcon2.png';
-
+import '../tabs.css';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import './tabs.css';
+import Childhood_Germany from '../../images/Childhood_Germany.JPG';
+import World_Music from '../../images/World_Music.jpeg';
+import Robot from '../../images/Robot.jpg';
+import Winners from '../../images/2019-Winner.jpg';
+import TabIcon from '../../images/TabIcon2.png';
 
-import tabHover from '../audio/tabHover.mp3';
-import tabClick from '../audio/tabClick.mp3';
+import tabHover from '../../audio/tabHover.mp3';
+import tabClick from '../../audio/tabClick.mp3';
 
 function play_F(file) {
     var audio = document.createElement('audio');

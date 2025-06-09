@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import SpecialButton from '../components/SpecialButton';
+import SpecialButton from '../../components/SpecialButton';
 
-import loadin1Audio from '../audio/loadin1.mp3';
+import loadin1Audio from '../../audio/loadin1.mp3';
 import { useDispatch, useSelector } from 'react-redux';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
-import { detailsExperience } from '../actions/experienceActions';
+import LoadingBox from '../../components/LoadingBox';
+import MessageBox from '../../components/MessageBox';
+import { detailsExperience } from '../../actions/experienceActions';
 
         var loadin1 = new Audio();
       

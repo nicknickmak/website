@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import Experience from '../components/Experience';
+import Experience from '../../components/Experience';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 
-import cardHoverAudio from '../audio/cardHover.mp3';
-import cardOpenAudio from '../audio/cardOpen.mp3';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
+import cardHoverAudio from '../../audio/cardHover.mp3';
+import cardOpenAudio from '../../audio/cardOpen.mp3';
+import LoadingBox from '../../components/LoadingBox';
+import MessageBox from '../../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
-import { listExperiences } from '../actions/experienceActions';
+import { listExperiences } from '../../actions/experienceActions';
 
-import './carousel.css';
-import { playAudio } from '../utils/audioUtils';
+import '../carousel.css';
+import { playAudio } from '../../utils/audioUtils';
 
 export default function ExperiencesScreen() {
     const dispatch = useDispatch();
