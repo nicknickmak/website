@@ -37,75 +37,92 @@ function App() {
 
     return (
       <BrowserRouter>
-        <div className="background">
-          {balls.map((num) => (
-            <div key={num} className={`floating-ball ball${num}`}></div>
-          ))}
-        </div>
-        <div className="backgroundLogo"></div>
+        <div class="mobile-browser">
+          <div className="background">
+            {balls.map((num) => (
+              <div key={num} className={`floating-ball ball${num}`}></div>
+            ))}
+          </div>
+          <div className="backgroundLogo"></div>
 
-        <div className="grid-container">
-          <main>
-            <Route path="/resume" component={ResumeScreen}></Route>
-            <Route path="/about" component={AboutScreen}></Route>
-            <Route path="/inspiration" component={InspirationScreen}></Route>
-            <Route path="/experiences" component={ExperiencesScreen}></Route>
-            <Route path="/experience/:id" component={ExperienceScreen}></Route>
-            <Route path="/projects" component={ProjectsScreen}></Route>
-            <Route path="/project/:id" component={ProjectScreen}></Route>
-            <Route path="/" component={HomeScreen} exact></Route>
+          <div className="grid-container">
+            <main>
+              <Route path="/resume" component={ResumeScreen}></Route>
+              <Route path="/about" component={AboutScreen}></Route>
+              <Route path="/inspiration" component={InspirationScreen}></Route>
+              <Route path="/experiences" component={ExperiencesScreen}></Route>
+              <Route
+                path="/experience/:id"
+                component={ExperienceScreen}
+              ></Route>
+              <Route path="/projects" component={ProjectsScreen}></Route>
+              <Route path="/project/:id" component={ProjectScreen}></Route>
+              <Route path="/" component={HomeScreen} exact></Route>
 
-            {/* content after header  */}
-          </main>
-          <footer className="footer-mobile row">
-            <NavLink
-              className="navItem"
-              to="/resume"
-              activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="navButton">RESUME</div>
-            </NavLink>
-            <NavLink
-              className="navItem"
-              to="/about"
-              activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="navButton">ABOUT ME</div>
-            </NavLink>
-            <NavLink
-              className="navItem navCenter"
-              exact
-              to="/"
-              activeStyle={{ backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="brand" activeStyle={{ opacity: "0.5px" }}></div>
-              <div className="brandText">NICK MAK</div>
-            </NavLink>
-            <NavLink
-              className="navItem"
-              to="/experiences"
-              activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="navButton">EXPERIENCE</div>
-            </NavLink>
-            <NavLink
-              className="navItem"
-              to="/projects"
-              activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="navButton">PROJECTS</div>
-            </NavLink>
-          </footer>
+              {/* content after header  */}
+            </main>
+            <footer className="footer-mobile row">
+              <NavLink
+                className="navItem"
+                to="/resume"
+                activeStyle={{
+                  color: "#eaeeb2",
+                  backgroundColor: "transparent",
+                }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="navButton">RESUME</div>
+              </NavLink>
+              <NavLink
+                className="navItem"
+                to="/about"
+                activeStyle={{
+                  color: "#eaeeb2",
+                  backgroundColor: "transparent",
+                }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="navButton">ABOUT ME</div>
+              </NavLink>
+              <NavLink
+                className="navItem navCenter"
+                exact
+                to="/"
+                activeStyle={{ backgroundColor: "transparent" }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="brand" activeStyle={{ opacity: "0.5px" }}></div>
+                <div className="brandText">NICK MAK</div>
+              </NavLink>
+              <NavLink
+                className="navItem"
+                to="/experiences"
+                activeStyle={{
+                  color: "#eaeeb2",
+                  backgroundColor: "transparent",
+                }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="navButton">EXPERIENCE</div>
+              </NavLink>
+              <NavLink
+                className="navItem"
+                to="/projects"
+                activeStyle={{
+                  color: "#eaeeb2",
+                  backgroundColor: "transparent",
+                }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="navButton">PROJECTS</div>
+              </NavLink>
+            </footer>
+          </div>
         </div>
       </BrowserRouter>
     );
@@ -117,85 +134,105 @@ function App() {
     }
     return (
       <BrowserRouter>
-        <div className="background">
-          {balls.map((num) => (
-            <div key={num} className={`floating-ball ball${num}`}></div>
-          ))}
-        </div>
-        <div className="backgroundLogo"></div>
+        <div class="desktop-browser">
+          <div className="background">
+            {balls.map((num) => (
+              <div key={num} className={`floating-ball ball${num}`}></div>
+            ))}
+          </div>
+          <div className="backgroundLogo"></div>
 
-        <div className="grid-container">
-          <header className="row">
-            <NavLink
-              className="navItem"
-              to="/resume"
-              activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="navButton">RESUME</div>
-            </NavLink>
-            <NavLink
-              className="navItem"
-              to="/about"
-              activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="navButton">ABOUT ME</div>
-            </NavLink>
-            <NavLink
-              className="navItem navCenter"
-              exact
-              to="/"
-              activeStyle={{ backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="brand" activeStyle={{ opacity: "0.5px" }}></div>
-              <div className="brandText">NICK MAK</div>
-            </NavLink>
-            <NavLink
-              className="navItem"
-              to="/experiences"
-              activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="navButton">EXPERIENCE</div>
-            </NavLink>
-            <NavLink
-              className="navItem"
-              to="/projects"
-              activeStyle={{ color: "#eaeeb2", backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="navButton">PROJECTS</div>
-            </NavLink>
-          </header>
-          <main>
-            <Route path="/resume" component={ResumeScreen}></Route>
-            <Route path="/about" component={AboutScreen}></Route>
-            <Route path="/inspiration" component={InspirationScreen}></Route>
-            <Route path="/experiences" component={ExperiencesScreen}></Route>
-            <Route path="/experience/:id" component={ExperienceScreen}></Route>
-            <Route path="/projects" component={ProjectsScreen}></Route>
-            <Route path="/project/:id" component={ProjectScreen}></Route>
-            <Route path="/" component={HomeScreen} exact></Route>
+          <div className="grid-container">
+            <header className="row">
+              <NavLink
+                className="navItem"
+                to="/resume"
+                activeStyle={{
+                  color: "#eaeeb2",
+                  backgroundColor: "transparent",
+                }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="navButton">RESUME</div>
+              </NavLink>
+              <NavLink
+                className="navItem"
+                to="/about"
+                activeStyle={{
+                  color: "#eaeeb2",
+                  backgroundColor: "transparent",
+                }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="navButton">ABOUT ME</div>
+              </NavLink>
+              <NavLink
+                className="navItem navCenter"
+                exact
+                to="/"
+                activeStyle={{ backgroundColor: "transparent" }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="brand" activeStyle={{ opacity: "0.5px" }}></div>
+                <div className="brandText">NICK MAK</div>
+              </NavLink>
+              <NavLink
+                className="navItem"
+                to="/experiences"
+                activeStyle={{
+                  color: "#eaeeb2",
+                  backgroundColor: "transparent",
+                }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="navButton">EXPERIENCE</div>
+              </NavLink>
+              <NavLink
+                className="navItem"
+                to="/projects"
+                activeStyle={{
+                  color: "#eaeeb2",
+                  backgroundColor: "transparent",
+                }}
+                onMouseEnter={() => playAudio(hoverAudio)}
+                onMouseUp={() => playAudio(downAudio)}
+              >
+                <div className="navButton">PROJECTS</div>
+              </NavLink>
+            </header>
+            <main>
+              <Route path="/resume" component={ResumeScreen}></Route>
+              <Route path="/about" component={AboutScreen}></Route>
+              <Route path="/inspiration" component={InspirationScreen}></Route>
+              <Route path="/experiences" component={ExperiencesScreen}></Route>
+              <Route
+                path="/experience/:id"
+                component={ExperienceScreen}
+              ></Route>
+              <Route path="/projects" component={ProjectsScreen}></Route>
+              <Route path="/project/:id" component={ProjectScreen}></Route>
+              <Route path="/" component={HomeScreen} exact></Route>
 
-            {/* content after header  */}
-          </main>
-          <footer className="footer-desktop">
-            <div className="row center sm">
-              <a href="https://www.linkedin.com/in/nick-l-mak/" target="_blank">
-                <img className="social" src={LinkedIn} alt="LinkedIn"></img>
-              </a>
-              <a href="https://github.com/nmakucsd" target="_blank">
-                <img className="social" src={Github} alt="Github"></img>
-              </a>
-            </div>
-          </footer>
+              {/* content after header  */}
+            </main>
+            <footer className="footer-desktop">
+              <div className="row center sm">
+                <a
+                  href="https://www.linkedin.com/in/nick-l-mak/"
+                  target="_blank"
+                >
+                  <img className="social" src={LinkedIn} alt="LinkedIn"></img>
+                </a>
+                <a href="https://github.com/nmakucsd" target="_blank">
+                  <img className="social" src={Github} alt="Github"></img>
+                </a>
+              </div>
+            </footer>
+          </div>
         </div>
       </BrowserRouter>
     );
