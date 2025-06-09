@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import SpecialButton from '../../components/SpecialButton';
-
+import "./card.css";
 import loadin1Audio from '../../audio/loadin1.mp3';
 import { useDispatch, useSelector } from 'react-redux';
 import LoadingBox from '../../components/LoadingBox';
