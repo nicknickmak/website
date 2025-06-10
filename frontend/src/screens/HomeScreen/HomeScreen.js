@@ -14,40 +14,32 @@ import tabHover from '../../audio/tabHover.mp3';
 import tabClick from '../../audio/tabClick.mp3';
 
 export default function HomeScreen() {
+    const tabTitles = ["DAILY DATA", "NEW IDEAS", "COMING SOON"];
+
     return (
         <div>
             <div className="Home fadein" onLoad={() => playAudio(cardOpenAudio)}>
                 <Tabs>
                     <TabList>
-                        <Tab
+                        {tabTitles.map((title) => (
+                            <Tab
                             onMouseEnter={() => playAudio(tabHover)}
-                            onMouseUp={() => playAudio(tabClick)}>
-                            DAILY DATA
-                            <div className="diamond"></div>
+                            onMouseUp={() => playAudio(tabClick)}
+                            >
+                            {title}
+                            <div className="tab-icons">
+                                <div className="diamond"></div>
+                                <img
+                                className="tab-icon"
+                                src={TabIcon}
+                                alt="tab-icon"
+                                width="26"
+                                ></img>
+                            </div>
                             <div className="bg-expand"></div>
                             <div className="line-expand"></div>
-                            <img className="tab-icon" src={TabIcon} alt="tab-icon" width="26"></img>
-
-                        </Tab>
-                        <Tab
-                            onMouseEnter={() => playAudio(tabHover)}
-                            onMouseUp={() => playAudio(tabClick)}>
-                            NEW IDEAS
-                            <div className="diamond"></div>
-                            <div className="bg-expand"></div>
-                            <div className="line-expand"></div>
-                            <img className="tab-icon" src={TabIcon} alt="tab-icon" width="26"></img>
-
-                        </Tab>
-                        <Tab
-                            onMouseEnter={() => playAudio(tabHover)}
-                            onMouseUp={() => playAudio(tabClick)}>
-                            COMING SOON
-                            <div className="diamond"></div>
-                            <div className="bg-expand"></div>
-                            <div className="line-expand"></div>
-                            <img className="tab-icon" src={TabIcon} alt="tab-icon" width="26"></img>
-                        </Tab>
+                            </Tab>
+                        ))}
                     </TabList>
 
                     <TabPanel>

@@ -28,15 +28,17 @@ export default function AboutScreen() {
                 onMouseUp={() => playAudio(tabClick)}
               >
                 {title}
-                <div className="diamond"></div>
+                <div className="tab-icons">
+                  <div className="diamond"></div>
+                  <img
+                    className="tab-icon"
+                    src={TabIcon}
+                    alt="tab-icon"
+                    width="26"
+                  ></img>
+                </div>
                 <div className="bg-expand"></div>
                 <div className="line-expand"></div>
-                <img
-                  className="tab-icon"
-                  src={TabIcon}
-                  alt="tab-icon"
-                  width="26"
-                ></img>
               </Tab>
             ))}
           </TabList>

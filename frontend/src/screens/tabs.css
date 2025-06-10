@@ -1,63 +1,31 @@
 .react-tabs {
-    -webkit-tap-highlight-color: transparent;
-  }
-  
+.mobile {
   .react-tabs__tab-list {
-    border-bottom: 1px solid rgba(228, 227, 227, 0.651);
-    margin: 1.3rem 0 2rem;
-    padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  /*////////////////////////////////////////////////////////////*/
   .react-tabs__tab {
-    width: 15rem;
-    display: inline-block;
-    text-align: center;
-    border-bottom: 3px solid rgba(234, 238, 178, 0);
-    bottom: -1px;
-    position: relative;
-    list-style: none;
-    padding: 6px 3.5rem;
-    cursor: pointer;
-    font-size: clamp(1.1rem, 1vw, 1.5rem);
-    font-weight: bold;
-    letter-spacing: 1px;
+    padding: 6px;
   }
-  .react-tabs__tab:hover {
-    border-bottom: 3px solid rgb(234, 238, 178);
-  }
-  .diamond {
-    position: absolute;
-    bottom: -14%;
-    left: 49.1%;
-    transform: rotate(45deg);
-    background-color: white;
-    padding: 2.2px;
-  }
-    .bg-expand {
-        position: absolute;
-        top:0%;
-        bottom: 0%;
-        left: 0%;
-        right: 0%;
-        
-    }
-    .line-expand {
-        position: absolute;
-        top:100%;
-        bottom: -8%;
-        left: 0%;
-        right: 0%;
-    }
-    .tab-icon {
-        position: absolute;
-        top:86%;
-        left: 44.2%;
-        opacity: 0;
-    }
+}
 
+.tab-icons {
+  background-color: rgba(255, 255, 255, 0.152);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diamond {
+  transform: rotate(45deg);
+  background-color: white;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  bottom: 0px;
+}
 
 /*////////////////////////////////////////////////////////////*/
 .react-tabs__tab:active {
@@ -71,13 +39,10 @@
 }
 
 .react-tabs__tab--selected .diamond {
-    background-color: rgb(234, 238, 178);
-    bottom: -10%;
-    left: 48.8%;
-    padding: 3px;
-    animation-name: fade-down;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
+  background-color: rgb(234, 238, 178);
+  animation-name: fade-down;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
 }
 .react-tabs__tab--selected .tab-icon {
     opacity: 1;
