@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import AboutScreen from "./screens/AboutScreen/AboutScreen";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
@@ -16,19 +15,12 @@ import InspirationScreen from "./screens/InspirationScreen";
 import LinkedIn from "./images/LinkedIn.png";
 import Github from "./images/Github.png";
 import { playAudio } from "./utils/audioUtils";
+import { useIsMobile } from "./utils/useIsMobile";
 
 function App() {
   const balls = [1, 2, 3, 4, 5, 6, 7, 8];
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 768);
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useIsMobile();
 
   function loadMobileApp() {
     if (!isMobile) {
