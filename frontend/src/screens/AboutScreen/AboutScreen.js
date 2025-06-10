@@ -15,56 +15,30 @@ import { playAudio } from "../../utils/audioUtils";
 }
 
 export default function AboutScreen() {
+  const tabTitles = ["First Robotics", "University", "Career"];
+
   return (
     <div className={`notHome ${useIsMobile() ? "mobile" : ""}`}>
       <div className="col-1 container content-paragraph fadein">
         <Tabs>
           <TabList>
-            <Tab
-              onMouseEnter={() => playAudio(tabHover)}
-              onMouseUp={() => playAudio(tabClick)}
-            >
-              EARLY LIFE
-              <div className="diamond"></div>
-              <div className="bg-expand"></div>
-              <div className="line-expand"></div>
-              <img
-                className="tab-icon"
-                src={TabIcon}
-                alt="tab-icon"
-                width="26"
-              ></img>
-            </Tab>
-            <Tab
-              onMouseEnter={() => playAudio(tabHover)}
-              onMouseUp={() => playAudio(tabClick)}
-            >
-              UNIVERSITY
-              <div className="diamond"></div>
-              <div className="bg-expand"></div>
-              <div className="line-expand"></div>
-              <img
-                className="tab-icon"
-                src={TabIcon}
-                alt="tab-icon"
-                width="26"
-              ></img>
-            </Tab>
-            <Tab
-              onMouseEnter={() => playAudio(tabHover)}
-              onMouseUp={() => playAudio(tabClick)}
-            >
-              PRESENT
-              <div className="diamond"></div>
-              <div className="bg-expand"></div>
-              <div className="line-expand"></div>
-              <img
-                className="tab-icon"
-                src={TabIcon}
-                alt="tab-icon"
-                width="26"
-              ></img>
-            </Tab>
+            {tabTitles.map((title) => (
+              <Tab
+                onMouseEnter={() => playAudio(tabHover)}
+                onMouseUp={() => playAudio(tabClick)}
+              >
+                {title}
+                <div className="diamond"></div>
+                <div className="bg-expand"></div>
+                <div className="line-expand"></div>
+                <img
+                  className="tab-icon"
+                  src={TabIcon}
+                  alt="tab-icon"
+                  width="26"
+                ></img>
+              </Tab>
+            ))}
           </TabList>
           <TabPanel>
             <div className="scrollContent1">
