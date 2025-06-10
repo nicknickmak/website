@@ -13,13 +13,21 @@ import '../carousel.css';
 import { playAudio } from '../../utils/audioUtils';
 
 export default function ExperiencesScreen() {
-    const dispatch = useDispatch();
-    const experienceList = useSelector(state => state.experienceList);
-    const { loading, error, experiences } = experienceList;
-    //this function will run only one time (fetch ajax request)
-    useEffect(() => {
+    function useFetchExperiences() {
+      const dispatch = useDispatch();
+      const experienceList = useSelector((state) => state.experienceList);
+      const { loading, error, experiences } = experienceList;
+      useEffect(() => {
         dispatch(listExperiences());
-    }, [dispatch])
+      }, [dispatch]);
+      // Sort experiences by number, ascending
+      const sortedExperiences = experiences
+        ? [...experiences].sort((a, b) => a.number - b.number)
+        : [];
+      return { loading, error, experiences: sortedExperiences };
+    }
+
+    const { loading, error, experiences } = useFetchExperiences();
     return (
         <div>
             {loading ? <LoadingBox></LoadingBox>

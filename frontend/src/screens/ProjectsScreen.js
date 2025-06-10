@@ -13,13 +13,21 @@ import { playAudio } from '../utils/audioUtils';
 import './carousel.css';
 
 export default function ProjectsScreen() {
-    const dispatch = useDispatch();
-    const projectList = useSelector(state => state.projectList);
-    const { loading, error, projects } = projectList;
-    //this function will run only one time (fetch ajax request)
-    useEffect(() => {
+    function useProjects() {
+      const dispatch = useDispatch();
+      const projectList = useSelector((state) => state.projectList);
+      const { loading, error, projects } = projectList;
+      useEffect(() => {
         dispatch(listProjects());
-    }, [dispatch])
+      }, [dispatch]);
+      // Sort projects by number before returning
+      const sortedProjects = projects
+        ? [...projects].sort((a, b) => a.number - b.number)
+        : [];
+      return { loading, error, projects: sortedProjects };
+    }
+
+    const { loading, error, projects } = useProjects();
     return (
         <div>
             {loading ? <LoadingBox></LoadingBox>
