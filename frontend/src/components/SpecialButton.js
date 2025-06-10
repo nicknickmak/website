@@ -25,7 +25,7 @@ export default function SpecialButton(props) {
     if(purpose.active)
     return (
         <div className="special-button" 
-        tabindex="-1"
+        tabIndex="-1"
         onMouseEnter={() => SBHover.play()}
         onMouseUp={() => SPPress(purpose)}
         >
@@ -55,7 +55,7 @@ export default function SpecialButton(props) {
     else {
         return (
             <div className="special-button-2" 
-        tabindex="-1"
+        tabIndex="-1"
         onMouseEnter={() => SBHover.play()}
         >   
             <div className="button-text">{purpose.action}</div> 

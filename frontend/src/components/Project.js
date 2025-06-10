@@ -11,22 +11,22 @@ function CardPress(project) {
 export default function Project(props) {
     const {project} = props;
     return (
-        <div key={project._id}  
+      <div
+        key={project._id}
         className="card"
-        tabindex="-1" //this enables the glow to happen when clicked
+        tabIndex="-1" //this enables the glow to happen when clicked
         onMouseEnter={() => playAudio(cardHoverAudio, 1)}
         onMouseUp={() => CardPress(project)}
-        >
-            <div className="card-head">
-                <img className="card-image" src={project.image} alt={project.name} />
-                <div className="date-box">{project.dateShort}</div>
-            </div>
-
-
-            <div className="card-body">
-                <h2>{project.name}</h2>
-                <h3>{project.tech}</h3>
-            </div>
+      >
+        <div className="card-head">
+          <img className="card-image" src={project.image} alt={project.name} />
+          <div className="date-box">{project.dateShort}</div>
         </div>
-    )
+
+        <div className="card-body">
+          <h2>{project.name}</h2>
+          <h3>{project.tech}</h3>
+        </div>
+      </div>
+    );
 }
