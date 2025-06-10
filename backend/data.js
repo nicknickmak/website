@@ -6,20 +6,6 @@ import bcrypt from 'bcryptjs';
 
 
 const data = {
-  users: [
-    {
-      name: "Nick",
-      email: "nmak@ucsd.edu",
-      password: bcrypt.hashSync("Perp0Pikmin", 8),
-      isAdmin: true,
-    },
-    {
-      name: "Jenna",
-      email: "jmy001@ucsd.edu",
-      password: bcrypt.hashSync("babe", 8),
-      isAdmin: false,
-    },
-  ],
   projects: [
     {
       number: 0,
