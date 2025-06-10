@@ -13,16 +13,7 @@ import TabIcon from '../../images/TabIcon2.png';
 import tabHover from '../../audio/tabHover.mp3';
 import tabClick from '../../audio/tabClick.mp3';
 
-function play_F(file) {
-    var audio = document.createElement('audio');
-    audio.src = file;
-    audio.volume = 1;
-    document.body.appendChild(audio);
-    audio.play();
-
-    audio.onended = function () {
-        this.parentNode.removeChild(this);
-    }
+import { playAudio } from "../../utils/audioUtils";
 }
 
 export default function AboutScreen() {
