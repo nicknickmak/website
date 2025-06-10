@@ -35,7 +35,7 @@ function App() {
               <div key={num} className={`floating-ball ball${num}`}></div>
             ))}
           </div>
-          <div className="backgroundLogo"></div>
+          {/* <div className="backgroundLogo"></div> */}
 
           <div className="grid-container">
             <main>
@@ -132,7 +132,7 @@ function App() {
               <div key={num} className={`floating-ball ball${num}`}></div>
             ))}
           </div>
-          <div className="backgroundLogo"></div>
+          {/* <div className="backgroundLogo"></div> */}
 
           <div className="grid-container">
             <header className="row">
