@@ -5,48 +5,52 @@ html {
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 }
 .mobile-browser {
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-            "main"
-            "footer";
-    }
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "main"
+      "footer";
+  }
 
-    footer {
-        grid-area: footer;
-        background-image: -webkit-linear-gradient(bottom,
-                rgba(0, 0, 0, 0.7) 0%,
-                rgba(0, 0, 0, 0.2) 40%,
-                rgba(255, 255, 255, 0) 90%);
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        border-top: 1px rgb(146, 146, 146) solid;
-    }
-    .backgroundLogo {
-        transform: scaleY(-1);
-    }
+  footer {
+    grid-area: footer;
+    background-image: -webkit-linear-gradient(
+      bottom,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.2) 40%,
+      rgba(255, 255, 255, 0) 90%
+    );
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-top: 1px rgb(146, 146, 146) solid;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .backgroundLogo {
+    transform: scaleY(-1);
+  }
 }
 
 .desktop-browser {
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";
-    }
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
 
-    footer {
-        grid-area: footer;
-        background-color: #417e96c2;
-        color: #ffffff;
-    }
-    .backgroundLogo {
-        top: 0%;
-    }
+  footer {
+    grid-area: footer;
+    background-color: #417e96c2;
+    color: #ffffff;
+  }
+  .backgroundLogo {
+    top: 0%;
+  }
 }
 body {
   margin: 0;
@@ -60,97 +64,98 @@ body {
 }
 
 .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    overflow: hidden;
-    pointer-events: none;
-    background-color: rgb(57, 57, 57);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: rgb(57, 57, 57);
 }
 
 .background .floating-ball {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.5;
-    pointer-events: none;
-    animation: float-circular 8s linear infinite;
-    filter: blur(20px);
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+  animation: float-circular 8s linear infinite;
+  filter: blur(20px);
 }
 
 .background .floating-ball.ball1,
 .background .floating-ball.ball2,
 .background .floating-ball.ball3 {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.5;
-    pointer-events: none;
-    background: radial-gradient(circle at 30% 30%, #dbd6ff 80%, transparent 100%);
-    animation: float-circular 8s linear infinite;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  pointer-events: none;
+  background: radial-gradient(circle at 30% 30%, #dbd6ff 80%, transparent 100%);
+  animation: float-circular 8s linear infinite;
 }
 
 .background .floating-ball.ball1 {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 
-    left: 10vw;
-    top: 40vh;
-    animation-delay: 0s;
-    --radius: 120px;
-    --angle: 0deg;
+  left: 10vw;
+  top: 40vh;
+  animation-delay: 0s;
+  --radius: 120px;
+  --angle: 0deg;
 }
 
 .background .floating-ball.ball2 {
-    width: 60px;
-    height: 60px;
-    left: 70vw;
-    top: 60vh;
-    animation-delay: 2s;
-    --radius: 90px;
-    --angle: 120deg;
+  width: 60px;
+  height: 60px;
+  left: 70vw;
+  top: 60vh;
+  animation-delay: 2s;
+  --radius: 90px;
+  --angle: 120deg;
 }
 
 .background .floating-ball.ball3 {
-    width: 100px;
-    height: 100px;
-    left: 40vw;
-    top: 20vh;
-    animation-delay: 4s;
-    --radius: 150px;
-    --angle: 240deg;
+  width: 100px;
+  height: 100px;
+  left: 40vw;
+  top: 20vh;
+  animation-delay: 4s;
+  --radius: 150px;
+  --angle: 240deg;
 }
 
 .background .floating-ball.ball4 {
-    width: 70px;
-    height: 70px;
-    left: 30vw;
-    top: 80vh;
-    animation-delay: 6s;
-    --radius: 110px;
-    --angle: 60deg;
+  width: 70px;
+  height: 70px;
+  left: 30vw;
+  top: 80vh;
+  animation-delay: 6s;
+  --radius: 110px;
+  --angle: 60deg;
 }
 
 .background .floating-ball.ball5 {
-    width: 90px;
-    height: 90px;
-    left: 50vw;
-    top: 30vh;
-    animation-delay: 8s;
-    --radius: 130px;
-    --angle: 300deg;
+  width: 90px;
+  height: 90px;
+  left: 50vw;
+  top: 30vh;
+  animation-delay: 8s;
+  --radius: 130px;
+  --angle: 300deg;
 }
 
-
 @keyframes float-circular {
-    0% {
-        transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(-1 * var(--angle)));
-    }
+  0% {
+    transform: rotate(var(--angle)) translateX(var(--radius))
+      rotate(calc(-1 * var(--angle)));
+  }
 
-    100% {
-        transform: rotate(calc(360deg + var(--angle))) translateX(var(--radius)) rotate(calc(-360deg - var(--angle)));
-    }
+  100% {
+    transform: rotate(calc(360deg + var(--angle))) translateX(var(--radius))
+      rotate(calc(-360deg - var(--angle)));
+  }
 }
 
 :focus {
@@ -182,7 +187,7 @@ body {
   top: 0%;
   left: 0%;
   right: 0%;
-bottom: 0%;
+  bottom: 0%;
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
@@ -461,7 +466,6 @@ img.large {
 }
 
 .scrollContent1 {
-  height: 700px;
   position: relative;
 }
 
@@ -471,6 +475,8 @@ img.large {
   max-width: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.295);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .alert {
