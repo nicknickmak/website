@@ -6,7 +6,7 @@ import ExperienceScreen from "./screens/ExperienceScreen/ExperienceScreen";
 import ProjectsScreen from "./screens/ProjectsScreen";
 import ExperiencesScreen from "./screens/ExperiencesScreen/ExperiencesScreen";
 
-import ResumeScreen from "./screens/ResumeScreen";
+import ResumeScreen from "./screens/ResumeScreen/ResumeScreen";
 
 import hoverAudio from "./audio/HoverClick.mp3";
 import downAudio from "./audio/downClick.mp3";
