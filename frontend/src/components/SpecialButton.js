@@ -1,4 +1,4 @@
-import "./SpecialButton.css";
+import "./SpecialButton.scss";
 
 import specialButtonHoverAudio from "../audio/specialButtonHover.mp3";
 import specialButtonClickAudio from "../audio/specialButtonClick.mp3";
@@ -32,12 +32,10 @@ export default function SpecialButton(props) {
       >
         <div className="button-text">{purpose.action}</div>
 
-        <div className="corner">
-          <div className="top right"></div>
-          <div className="top left"></div>
-          <div className="bottom right"></div>
-          <div className="bottom left"></div>
-        </div>
+        <div className="corners top right"></div>
+        <div className="corners top left"></div>
+        <div className="corners bottom right"></div>
+        <div className="corners bottom left"></div>
 
         <div className="box">
           <div></div>
@@ -54,17 +52,15 @@ export default function SpecialButton(props) {
   else {
     return (
       <div
-        className="special-button-2"
+        className="special-button disabled"
         tabIndex="-1"
         onMouseEnter={() => SBHover.play()}
       >
         <div className="button-text">{purpose.action}</div>
-        <div className="corner">
-          <div className="top right"></div>
-          <div className="top left"></div>
-          <div className="bottom right"></div>
-          <div className="bottom left"></div>
-        </div>
+        <div className="corners top right"></div>
+        <div className="corners top left"></div>
+        <div className="corners bottom right"></div>
+        <div className="corners bottom left"></div>
       </div>
     );
   }
