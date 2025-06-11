@@ -23,6 +23,30 @@ function App() {
 
   const isMobile = useIsMobile();
 
+  /**
+   * Defines the application's main route configuration.
+   *
+   * Each <Route> maps a specific URL path to its corresponding screen component.
+   * Supports both static and dynamic routes (e.g., with :id parameters).
+   *
+   * @function
+   * @returns {JSX.Element} A fragment containing all route definitions for the app.
+   */
+  function AppRoutes() {
+    return (
+      <>
+        <Route path="/resume" component={ResumeScreen}></Route>
+        <Route path="/about" component={AboutScreen}></Route>
+        <Route path="/inspiration" component={InspirationScreen}></Route>
+        <Route path="/experiences" component={ExperiencesScreen}></Route>
+        <Route path="/experience/:id" component={ExperienceScreen}></Route>
+        <Route path="/projects" component={ProjectsScreen}></Route>
+        <Route path="/project/:id" component={ProjectScreen}></Route>
+        <Route path="/" component={HomeScreen} exact></Route>
+      </>
+    );
+  }
+
   function loadMobileApp() {
     if (!isMobile) {
       return;
@@ -39,21 +63,7 @@ function App() {
           {/* <div className="backgroundLogo"></div> */}
 
           <div className="grid-container">
-            <main>
-              <Route path="/resume" component={ResumeScreen}></Route>
-              <Route path="/about" component={AboutScreen}></Route>
-              <Route path="/inspiration" component={InspirationScreen}></Route>
-              <Route path="/experiences" component={ExperiencesScreen}></Route>
-              <Route
-                path="/experience/:id"
-                component={ExperienceScreen}
-              ></Route>
-              <Route path="/projects" component={ProjectsScreen}></Route>
-              <Route path="/project/:id" component={ProjectScreen}></Route>
-              <Route path="/" component={HomeScreen} exact></Route>
-
-              {/* content after header  */}
-            </main>
+            <main>{AppRoutes()}</main>
             <footer className="row">{MainNavBar()}</footer>
           </div>
         </div>
@@ -77,21 +87,7 @@ function App() {
 
           <div className="grid-container">
             <header className="row">{MainNavBar()}</header>
-            <main>
-              <Route path="/resume" component={ResumeScreen}></Route>
-              <Route path="/about" component={AboutScreen}></Route>
-              <Route path="/inspiration" component={InspirationScreen}></Route>
-              <Route path="/experiences" component={ExperiencesScreen}></Route>
-              <Route
-                path="/experience/:id"
-                component={ExperienceScreen}
-              ></Route>
-              <Route path="/projects" component={ProjectsScreen}></Route>
-              <Route path="/project/:id" component={ProjectScreen}></Route>
-              <Route path="/" component={HomeScreen} exact></Route>
-
-              {/* content after header  */}
-            </main>
+            <main>{AppRoutes()}</main>
             <footer>
               <div className="row center sm">
                 <a
