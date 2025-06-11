@@ -12,7 +12,7 @@
       rgba(0, 0, 0, 0.322) 0%,
       rgba(0, 0, 0, 0.048) 50%,
       rgba(0, 0, 0, 0.048) 75%,
-      rgba(255, 255, 255, 0) 100%
+      rgba(0, 0, 0, 0) 100%
     );
   }
   img {
@@ -20,19 +20,32 @@
     width: 100%;
     object-fit: cover;
   }
+
+p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+    /* Optional: add background for readability */
+    background-image: -webkit-linear-gradient(
+      left,
+      rgba(0, 0, 0, 0.815) 0%,
+      rgba(0, 0, 0, 0.616) 75%,
+      rgba(0, 0, 0, 0) 100%
+    );
+}
+
 }
 
 .imageCard h1 {
   margin: 3rem 3rem 2rem 3rem;
   font-size: 4rem;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-shadow: 2px 2px rgb(0 0 0 / 47%);
-}
-
-.imageCard p {
-  margin: 1rem 1rem 0 3rem;
-  font-size: 1.5rem;
-  text-shadow: 1px 1px rgba(0, 0, 0, 3.466);
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.65);
 }
 
 .details-body {
