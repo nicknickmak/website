@@ -17,94 +17,93 @@ export default function HomeScreen() {
     const tabTitles = ["DAILY DATA", "NEW IDEAS", "COMING SOON"];
 
     return (
-        <div>
-            <div className="Home fadein" onLoad={() => playAudio(cardOpenAudio)}>
-                <Tabs>
-                    <TabList>
-                        {tabTitles.map((title) => (
-                            <Tab
-                            onMouseEnter={() => playAudio(tabHover)}
-                            onMouseUp={() => playAudio(tabClick)}
-                            >
-                            {title}
-                            <div className="tab-icons">
-                                <div className="diamond"></div>
-                                <img
-                                className="tab-icon"
-                                src={TabIcon}
-                                alt="tab-icon"
-                                width="26"
-                                ></img>
-                            </div>
-                            <div className="bg-expand"></div>
-                            <div className="line-expand"></div>
-                            </Tab>
-                        ))}
-                    </TabList>
+      <div>
+        <div className="Home fadein" onLoad={() => playAudio(cardOpenAudio)}>
+          <Tabs>
+            <TabList>
+              {tabTitles.map((title) => (
+                <Tab
+                  onMouseEnter={() => playAudio(tabHover)}
+                  onMouseUp={() => playAudio(tabClick)}
+                >
+                  {title}
+                  <div className="tab-icons">
+                    <div className="diamond"></div>
+                    <img
+                      className="tab-icon"
+                      src={TabIcon}
+                      alt="tab-icon"
+                      width="26"
+                    ></img>
+                  </div>
+                  <div className="bg-expand"></div>
+                  <div className="line-expand"></div>
+                </Tab>
+              ))}
+            </TabList>
 
-                    <TabPanel>
-                        <div className="scrollContent1" >
-                            <div className="scrollContent2">
-                                <div className="row top">
-                                    {/* //LEFT HALF //////////////////////////////////////////////////////// */}
-                                    <div className="col-2">
-                                        <div className="row center bottomline">
-                                            <div className="title">DAILY DATA</div>
-                                        </div>
+            <TabPanel>
+              <div className="scrollContent1">
+                <div className="scrollContent2">
+                  <div className="row top">
+                    {/* //LEFT HALF //////////////////////////////////////////////////////// */}
+                    <div className="col-2">
+                      <div className="row center bottomline">
+                        <div className="title">DAILY DATA</div>
+                      </div>
 
-                                        <div className="graph">
-                                            {/* <div className="row grow">
+                      <div className="graph">
+                        {/* <div className="row grow">
                                                 <ProgrammingChart></ProgrammingChart>
                                             </div> */}
-                                            <div className="row grow">
-                                                <WorkoutChart></WorkoutChart>
-                                            </div>
-                                            <div className="row center">
-                                                <ShouldersChart></ShouldersChart>
-                                                <WaistChart></WaistChart>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {/* //RIGHT HALF //////////////////////////////////////////////////////// */}
-                                    <div className="col-2">
-                                        <div className="row center bottomline">
-                                            <div className="title">DATA FOR SELF BETTERMENT</div>
-                                        </div>
-                                        <div className="graph">
+                        <div className="row grow">
+                          <WorkoutChart></WorkoutChart>
+                        </div>
+                        <div className="row center">
+                          <ShouldersChart></ShouldersChart>
+                          <WaistChart></WaistChart>
+                        </div>
+                      </div>
+                    </div>
+                    {/* //RIGHT HALF //////////////////////////////////////////////////////// */}
+                    <div className="col-2">
+                      <div className="row center bottomline">
+                        <div className="title">DATA FOR SELF BETTERMENT</div>
+                      </div>
+                      <div className="graph">
+                        <div className="row center">
+                          <BicepChart></BicepChart>
+                          <SplitsChart></SplitsChart>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TabPanel>
 
-                                            <div className="row center">
-                                                <BicepChart></BicepChart>
-                                                <SplitsChart></SplitsChart>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </TabPanel>
-
-                    <TabPanel>
-                        <div className="row center bottomline">
-                            <div className="title">NEW IDEAS</div>
-                        </div>
-                        <div className="idea a">
-                            <div className="ideaContent">SPRINT TREE</div>
-                        </div>
-                        <div className="idea b">
-                            <div className="ideaContent">NEURAL NETWORK</div>
-                        </div>
-                        <div className="idea d">
-                            <div className="ideaContent">VIDEO INSTAGRAM FOR PROGRESS</div>
-                        </div>
-                        <div className="idea a">
-                            <div className="ideaContent">9 Sense Game: Main = Numb, discover light, color, ambience, sounds,
-                        </div>
-                        </div>
-                    </TabPanel>
-                </Tabs>
-            </div>
+            <TabPanel>
+              <div className="row center bottomline">
+                <div className="title">NEW IDEAS</div>
+              </div>
+              <div className="idea a">
+                <div className="ideaContent">SPRINT TREE</div>
+              </div>
+              <div className="idea b">
+                <div className="ideaContent">NEURAL NETWORK</div>
+              </div>
+              <div className="idea d">
+                <div className="ideaContent">VIDEO INSTAGRAM FOR PROGRESS</div>
+              </div>
+              <div className="idea a">
+                <div className="ideaContent">
+                  9 Sense Game: Main = Numb, discover light, color, ambience,
+                  sounds,
+                </div>
+              </div>
+            </TabPanel>
+          </Tabs>
         </div>
-
+      </div>
     );
 }
