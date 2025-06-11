@@ -81,10 +81,15 @@ function App() {
                 <a
                   href="https://www.linkedin.com/in/nick-l-mak/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img className="social" src={LinkedIn} alt="LinkedIn"></img>
                 </a>
-                <a href="https://github.com/nmakucsd" target="_blank">
+                <a
+                  href="https://github.com/nmakucsd"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img className="social" src={Github} alt="Github"></img>
                 </a>
               </div>

@@ -17,10 +17,18 @@ export default function HomeScreen() {
         </p>
         <nav className="home-nav">
           <div className="row center sm">
-            <a href="https://www.linkedin.com/in/nick-l-mak/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/nick-l-mak/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img className="social" src={LinkedIn} alt="LinkedIn"></img>
             </a>
-            <a href="https://github.com/nmakucsd" target="_blank">
+            <a
+              href="https://github.com/nmakucsd"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img className="social" src={Github} alt="Github"></img>
             </a>
           </div>
@@ -65,10 +73,18 @@ export default function HomeScreen() {
           Interested in working together or want to connect?
           <nav className="home-nav">
             <div className="row center sm">
-              <a href="https://www.linkedin.com/in/nick-l-mak/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/nick-l-mak/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img className="social" src={LinkedIn} alt="LinkedIn"></img>
               </a>
-              <a href="https://github.com/nmakucsd" target="_blank">
+              <a
+                href="https://github.com/nmakucsd"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img className="social" src={Github} alt="Github"></img>
               </a>
             </div>
