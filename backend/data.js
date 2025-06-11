@@ -1,9 +1,6 @@
-import bcrypt from 'bcryptjs';
-
-//To refresh data 
+//To refresh data
 //localhost:5000/api/projects/seed
 //localhost:5000/api/experiences/seed
-
 
 const data = {
   projects: [
@@ -16,7 +13,7 @@ const data = {
       date: "April 2021",
       dateShort: "4/2021",
       description:
-        "This Unity game was built for my VR class at UC San Diego. This project was an intro to basic game functionalities and based on the COVID-19 Virus. The player will try to shoot as many mutant viruses as they can before the timer runs out.",
+        "A fast-paced Unity game created for a VR course at UC San Diego, where players must shoot as many mutant viruses as possible before time runs out. Inspired by the COVID-19 pandemic, this project introduced me to core game development concepts and mechanics.",
       link: "https://nmakucsd.github.io/Virus_Shooter/index.html",
       action: "PLAY",
       active: true,
@@ -30,7 +27,7 @@ const data = {
       date: "September 2020 - April 2021",
       dateShort: "9/2020 - 4/2021",
       description:
-        "This is an E-commerce Web App built to connect produce sellers with restaurant and business owners in order to remove the middleman and allow both sides to have better business and pricing. Sellers are able to view and connect with restaurants nearby while buyers are able to easily see the selection of farmers and wholesale sellers nearby as well. This app is built with MongoDB, Express, React, and NodeJS.",
+        "A full-stack e-commerce platform connecting produce sellers with restaurants and businesses, eliminating the middleman for better pricing and business opportunities. Built with the MERN stack, it features user authentication, product listings, and location-based search.",
       link: "https://my-bulkup-app.herokuapp.com/",
       action: "VISIT SITE",
       active: true,
@@ -44,7 +41,7 @@ const data = {
       date: "January 2021",
       dateShort: "1/2021",
       description:
-        "This Unity game was built for my VR class at UC San Diego. This project needed to implement a simple game on social distancing. A deadly disease (much deadlier than COVID-19) has spread throughout the world and kills anyone who is within less than 6 feet (~2 meters) from an infected person that is not wearing a mask. The game is played in first person view in a 3D environment. People randomly spawn in front of the player, walking slowly towards them. The player's goal is to stare at them long enough for them to get reminded to put their mask on. If the person does not put their mask on before they get within 6 feet (~2 meters) from the player, the player gets infected and loses the game.",
+        "A Unity-based educational game designed to promote social distancing and mask-wearing. Players must encourage NPCs to wear masks before they get too close, simulating the importance of public health measures in a pandemic scenario.",
       link: "https://nmakucsd.github.io/Wear_A_Mask/index.html",
       action: "PLAY",
       active: true,
@@ -58,7 +55,7 @@ const data = {
       date: "November 2020",
       dateShort: "11/2020",
       description:
-        'This Unity game was built by me to start TritonXR\'s, a VR/AR organization in my university, Unity workshop series. This game is a 3rd person movement game which utilities collision mechanics and additiona physics to allow the player to push "Jellies" off the map.',
+        "A 3rd-person Unity game developed to kick off TritonXR's Unity workshop series. Players use physics-based mechanics to bump 'Jellies' off the map, learning about collision and movement in game development.",
       link: "https://nmakucsd.github.io/JellyBump/index.html",
       action: "PLAY",
       active: true,
@@ -72,7 +69,7 @@ const data = {
       date: "January 2020",
       dateShort: "1/2020",
       description:
-        "Tetris is one of my favorite strategy games. I decided to make this game in vanilla Javascript in order to learn the language.",
+        "A classic Tetris game implemented in vanilla JavaScript, created to deepen my understanding of the language and core web development concepts.",
       link: "https://nmakucsd.github.io/Tetris/",
       action: "PLAY",
       active: true,
@@ -86,7 +83,7 @@ const data = {
       date: "November 2019",
       dateShort: "11/2019",
       description:
-        'Rock Paper Scissors Lizard Spock is an enhancement of the classic game "Rock Paper Scissors" and was popularized by the American Sitcom "The Big Bang Theory". This simple game was made as an introduction to JavaScript\'s state mechanic. The player plays against a computer which randomly selects a play. The scoreboard reflects the wins and loses between the player and the computer.',
+        "An enhanced version of the classic Rock Paper Scissors game, inspired by 'The Big Bang Theory.' Built as an introduction to JavaScript state management, it allows players to compete against a computer opponent with an updated scoreboard.",
       link: "https://nmakucsd.github.io/RockPaperScissorsLizardSpock/",
       action: "PLAY",
       active: true,
@@ -100,7 +97,7 @@ const data = {
       date: "August 2014 - December 2017",
       dateShort: "8/2014 - 12/2017",
       description:
-        "The SOTA Cyberdragons is a robotics team based in San Francisco, California. We participate in FIRST (For Inspiration and Recognition of Science and Technology), which is an international robotics organizations that includes thousands of teams and hundreds of thousands of students. Our robotics program fosters ingenuity and champions the growth of well-rounded life skills such as communication, proactivity, and leadership. We are a nonprofit organization that runs a high-budget, and rely on sponsor donations, both in-kind and cash, to support the work we do. Started in 2014, SOTA Cyberdragons has been encouraging STEM (Science, Technology, Engineering, and Mathematics) through challenges tackled with modern technology. Throughout the years incoming members will develop a myriad of skills involving, cooperation and coordination. SOTA Cyberdragons is a team of artists from many backgrounds, banded together in order to form a unique innovation.",
+        "Founded and led a high school robotics team in San Francisco, participating in FIRST competitions. Managed programming, mechanical engineering, and team operations, fostering STEM skills and leadership among members.",
       link: "http://www.team5700.org/",
       action: "VISIT SITE",
       active: true,
@@ -111,29 +108,29 @@ const data = {
       number: 0,
       name: "Microsoft",
       role: "Software Engineer",
-      tech: "XPay",
+      tech: "XPay + Bing Ads",
       image: "/images/Microsoft.png",
       date: "May 2022 - Present",
       dateShort: "5/2022 - Present",
       description:
-        "I am working at Microsoft's E&D Department this summer, working for XPay.",
-      link: "",
-      action: "NDA",
+        "Currently working as a Software Engineer at Microsoft in the Experiences & Devices division, contributing to XPay and Bing Ads projects. Responsibilities include developing scalable solutions and collaborating with cross-functional teams.",
+      link: "https://ads.microsoft.com/",
+      action: "VISIT SITE",
       active: true,
     },
     {
       number: 1,
-      name: "ft",
+      name: "Microsoft (Internship)",
       role: "Software Engineer Intern",
       tech: "Bing Ads",
       image: "/images/Microsoft.png",
       date: "June 2021 - September 2021",
       dateShort: "6/2021 - 9/2021",
       description:
-        "I interned at Microsoft's E&D Department summer 2021, working for Bing Ads.",
-      link: "",
-      action: "Not Available",
-      active: false,
+        "Interned at Microsoft in the Experiences & Devices division, working on Bing Ads. Gained hands-on experience in large-scale software development and agile methodologies.",
+      link: "https://ads.microsoft.com/",
+      action: "VISIT SITE",
+      active: true,
     },
     {
       number: 2,
@@ -144,9 +141,9 @@ const data = {
       date: "January 2020 - April 2020",
       dateShort: "1/2020 - 4/2020",
       description:
-        "Toasty was a startup to make an mobile app driven to make building new social relationships easier. The focus of this technology was to remove initial biases individuals would have before going to events in order to enhance the amount of interactions individuals would actually participate. The app would schedule reservations and match multiple individuals based on interests and involvement. This technology was built with Flutter and Ruby on Rails.",
+        "Worked at Toasty, a startup focused on building a mobile app to facilitate meaningful social connections at events. Developed features using Flutter and Ruby on Rails, and contributed to user experience improvements.",
       link: "",
-      action: "This Project is Under NDA",
+      action: "NDA",
       active: false,
     },
     {
@@ -158,7 +155,7 @@ const data = {
       date: "November 2019 - February 2021",
       dateShort: "1/2020 - 2/2021",
       description:
-        'Triton XR (formerly the "Virtual Reality Club at UCSD") is a student organization at UC San Diego that connects members with the XR industry through workshops, projects, and networking. Our mission is to foster a multidisciplinary community dedicated to exploring and creating Extended Reality (Virtual, Augmented, and Mixed Reality) experiences. I initially joined the officers in order to motivate myself to learn more about 3D technology. I started as an assistant Project Manager and worked my way up to a Project Manager. While the role was motivating, I eventually decided to switch to be a Web Developer, for I felt it could help me get more experience with Sotware Engineering. Currently I am responsible for maintaining the Triton XR website and any upgrades I may have planned in the future.',
+        "Led web development for Triton XR, a UC San Diego student organization dedicated to XR technologies. Maintained and upgraded the organization's website, and supported workshops and community events.",
       link: "https://tritonxr.ucsd.edu/",
       action: "VISIT SITE",
       active: true,
@@ -172,10 +169,10 @@ const data = {
       date: "December 2020 - April 2021",
       dateShort: "12/2020 - 4/2021",
       description:
-        "This is an E-commerce Web App built to connect produce sellers with restaurant and business owners in order to remove the middleman and allow both sides to have better business and pricing. Sellers are able to view and connect with restaurants nearby while buyers are able to easily see the selection of farmers and wholesale sellers nearby as well. This app is built with MongoDB, Express, React, and NodeJS.",
+        "Developed and designed a MERN stack e-commerce platform connecting local produce sellers with buyers. Implemented core features such as authentication, product management, and responsive UI.",
       link: "https://my-bulkup-app.herokuapp.com/",
-      action: "VISIT SITE",
-      active: true,
+      action: "This Site is no longer active",
+      active: false,
     },
     {
       number: 5,
@@ -186,7 +183,7 @@ const data = {
       date: "November 2019 - May 2020",
       dateShort: "11/2019 - 5/2020",
       description:
-        "With my prior experience in robotics competitions and robotics programming completed as I enrolled in UCSD, I decided I wanted to get back into the robotics competition field. Robolink offered a position as a robotics instructor to teach kids not only the basics of programming through robots, but also the many experiences and joys it offers from simplying seeing something move to the excitement of competitions. Robolink provides an opportunity for its students to participate in VEX IQ, an international robotics competition for kids in elementary and middle school. As a coach/instructor, I have to teach my students how to build a proper robot with common robotics concepts, how to program it in RobotC, and help them practice playing the game. I also teach other kids not in the VEX IQ program how to program Arduino based robots.",
+        "Taught robotics and programming to elementary and middle school students, preparing them for VEX IQ competitions. Covered topics in Python, RobotC, and robotics fundamentals, fostering STEM interest in young learners.",
       link: "https://shop.robolink.com/",
       action: "VISIT SITE",
       active: true,
@@ -200,7 +197,7 @@ const data = {
       date: "October 2019 - February 2020",
       dateShort: "10/2019 - 2/2020",
       description:
-        "The RoboCup Soccer annual project at IEEE@UCSD, developed by the RoboCup Federation, is a project about building a group of autonomous soccer robots and developing AI algorithms for them to perform various tactics on the soccer field.",
+        "Led the RoboCup Soccer project at IEEE@UCSD, guiding a team to build autonomous soccer robots and develop AI strategies for competitive play. Managed both hardware and software development.",
       link: "",
       action: "IEEE Robocup 2020 is no longer active",
       active: false,
@@ -214,7 +211,7 @@ const data = {
       date: "May 2017 - July 2017",
       dateShort: "5/2017 - 7/2017",
       description:
-        "The Taylor Collaboration is a R&D lab for orthopaedic research",
+        "Interned at The Taylor Collaboration, an orthopedic research and development lab. Assisted with engineering tasks and gained experience in G Code and laboratory research processes.",
       link: "https://thetaylorcollaboration.jimdofree.com/",
       action: "Visit Site",
       active: true,
