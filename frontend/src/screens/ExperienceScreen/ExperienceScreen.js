@@ -36,7 +36,7 @@ export default function ExperienceScreen(props) {
               <img src={experience.image} alt={experience.name}></img>
             </div>
           </div>
-          <div className="">
+          <div className="details-body">
             <ul>
               <li>
                 <h1>{experience.role}</h1>
@@ -49,9 +49,8 @@ export default function ExperienceScreen(props) {
               </li>
             </ul>
             <br></br>
+            <SpecialButton purpose={experience}></SpecialButton>
           </div>
-
-          <SpecialButton purpose={experience}></SpecialButton>
         </div>
       )}
     </div>
