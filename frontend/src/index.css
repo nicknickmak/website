@@ -415,39 +415,6 @@ img.large {
   object-fit: cover;
 }
 
-.imageCard {
-  text-transform: uppercase;
-  position: relative;
-  height: 500px;
-  width: 100%;
-}
-.imageCover {
-  margin: 2.5rem 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0.322) 0%,
-    rgba(0, 0, 0, 0.048) 25%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(255, 255, 255, 0) 90%
-  );
-}
-
-.imageCard h1 {
-  margin: 3rem 3rem 2rem 3rem;
-  font-size: 4rem;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  text-shadow: 2px 2px rgb(0 0 0 / 47%);
-}
-
-.imageCard p {
-  margin: 1rem 1rem 0 3rem;
-  font-size: 1.5rem;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.466);
-}
-
 .resume {
   margin-top: 9.5rem;
 }
