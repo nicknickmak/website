@@ -1,109 +1,62 @@
-import React from 'react';
-import cardOpenAudio from '../../audio/cardOpen.mp3';
-import { BicepChart, SplitsChart, ShouldersChart, WaistChart } from '../../components/LineCharts';
-import { WorkoutChart } from '../../components/CalendarCharts';
+import linkedinPhoto from "../../images/linkedin-photo.jpg";
+import "./HomeScreen.css";
 
-
-import TabIcon from '../../images/TabIcon2.png';
-
-import '../idea.css';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import '../tabs.css';
-import { playAudio } from '../../utils/audioUtils';
-import tabHover from '../../audio/tabHover.mp3';
-import tabClick from '../../audio/tabClick.mp3';
+import LinkedIn from "../../images/LinkedIn.png";
+import Github from "../../images/Github.png";
 
 export default function HomeScreen() {
-    const tabTitles = ["DAILY DATA", "NEW IDEAS", "COMING SOON"];
-
-    return (
-      <div>
-        <div className="Home fadein" onLoad={() => playAudio(cardOpenAudio)}>
-          <Tabs>
-            <TabList>
-              {tabTitles.map((title) => (
-                <Tab
-                  onMouseEnter={() => playAudio(tabHover)}
-                  onMouseUp={() => playAudio(tabClick)}
-                >
-                  {title}
-                  <div className="tab-icons">
-                    <div className="diamond"></div>
-                    <img
-                      className="tab-icon"
-                      src={TabIcon}
-                      alt="tab-icon"
-                      width="26"
-                    ></img>
-                  </div>
-                  <div className="bg-expand"></div>
-                  <div className="line-expand"></div>
-                </Tab>
-              ))}
-            </TabList>
-
-            <TabPanel>
-              <div className="scrollContent1">
-                <div className="scrollContent2">
-                  <div className="row top">
-                    {/* //LEFT HALF //////////////////////////////////////////////////////// */}
-                    <div className="col-2">
-                      <div className="row center bottomline">
-                        <div className="title">DAILY DATA</div>
-                      </div>
-
-                      <div className="graph">
-                        {/* <div className="row grow">
-                                                <ProgrammingChart></ProgrammingChart>
-                                            </div> */}
-                        <div className="row grow">
-                          <WorkoutChart></WorkoutChart>
-                        </div>
-                        <div className="row center">
-                          <ShouldersChart></ShouldersChart>
-                          <WaistChart></WaistChart>
-                        </div>
-                      </div>
-                    </div>
-                    {/* //RIGHT HALF //////////////////////////////////////////////////////// */}
-                    <div className="col-2">
-                      <div className="row center bottomline">
-                        <div className="title">DATA FOR SELF BETTERMENT</div>
-                      </div>
-                      <div className="graph">
-                        <div className="row center">
-                          <BicepChart></BicepChart>
-                          <SplitsChart></SplitsChart>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </TabPanel>
-
-            <TabPanel>
-              <div className="row center bottomline">
-                <div className="title">NEW IDEAS</div>
-              </div>
-              <div className="idea a">
-                <div className="ideaContent">SPRINT TREE</div>
-              </div>
-              <div className="idea b">
-                <div className="ideaContent">NEURAL NETWORK</div>
-              </div>
-              <div className="idea d">
-                <div className="ideaContent">VIDEO INSTAGRAM FOR PROGRESS</div>
-              </div>
-              <div className="idea a">
-                <div className="ideaContent">
-                  9 Sense Game: Main = Numb, discover light, color, ambience,
-                  sounds,
-                </div>
-              </div>
-            </TabPanel>
-          </Tabs>
-        </div>
-      </div>
-    );
+  return (
+    <div className="home-screen fadein">
+      <section className="home-section home-main">
+        <img src={linkedinPhoto} alt="Profile" className="home-photo" />
+        <h1 className="home-title">Hi, I'm Nick</h1>
+        <p className="home-subtitle">
+          <div>Software Engineer</div>
+          <div>Frontend & Full-Stack Development</div>
+          <div>AI & UX Enthusiast</div>
+        </p>
+        <nav className="home-nav">
+          <div className="row center sm">
+            <a href="https://www.linkedin.com/in/nick-l-mak/" target="_blank">
+              <img className="social" src={LinkedIn} alt="LinkedIn"></img>
+            </a>
+            <a href="https://github.com/nmakucsd" target="_blank">
+              <img className="social" src={Github} alt="Github"></img>
+            </a>
+          </div>
+        </nav>
+      </section>
+      <section className="home-section home-about">
+        <h2 className="home-section-title">About Me</h2>
+        <p className="home-section-text">
+          Innovative and results-driven software engineer with a passion for
+          crafting seamless user experiences and scalable solutions. With
+          experience at Microsoft, I’ve led UI development for internal Ads
+          experimentation products, migrated legacy codebases, and optimized
+          performance—cutting latency by 33%. My work spans frontend and
+          full-stack development, integrating Angular, React, and Azure
+          technologies to build robust, user-centric applications. Beyond my
+          professional expertise, I thrive on continuous learning, from
+          AI-powered solutions to creative personal projects. I bring strong
+          communication and leadership skills, regularly presenting features and
+          metrics to stakeholders and mentoring teams in engineering best
+          practices.
+        </p>
+      </section>
+      <section className="home-section home-services">
+        <h2 className="home-section-title">Projects</h2>
+        <p className="home-section-text">
+          Explore some of my recent work, including web apps, open-source
+          contributions, and personal projects.
+        </p>
+      </section>
+      <section className="home-section home-contact">
+        <h2 className="home-section-title">Contact</h2>
+        <p className="home-section-text">
+          Interested in working together or want to connect? Reach out via email
+          or the contact form.
+        </p>
+      </section>
+    </div>
+  );
 }

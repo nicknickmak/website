@@ -1,0 +1,73 @@
+.home-screen {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.home-section {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.home-main {
+  /* No extra styles needed, but you can add if desired */
+}
+
+.home-photo {
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2.5rem;
+  border: 5px solid #0077b5;
+}
+
+.home-title {
+  font-size: 3rem;
+}
+
+.home-subtitle {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  text-align: center;
+  width: 100%;
+}
+
+.home-nav {
+  margin-top: 3rem;
+}
+
+.home-nav .social {
+  height: 5rem;
+}
+
+.home-link {
+  margin: 0 2rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-about {
+  background: #151515a8;
+}
+
+.home-section-title {
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+.home-section-text {
+  font-size: clamp(1.25rem, 3vw, 2.25rem);
+  line-height: 1.5;
+}
+
+.home-services {
+  /* No extra styles needed, but you can add if desired */
+}
+
+.home-contact {
+  background: #151515a8;
+}
