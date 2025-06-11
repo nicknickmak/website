@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nmakucsd/new-website.git"
+    "url": "git+https://github.com/nicknickmak/new-website.git"
   },
   "author": "Nick Mak",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nmakucsd/new-website/issues"
+    "url": "https://github.com/nicknickmak/new-website/issues"
   },
-  "homepage": "https://nicknickmak.github.io/website/",
+  "homepage": "https://nicknickmak.github.io/",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
