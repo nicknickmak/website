@@ -1,6 +1,7 @@
 import { playAudio } from "../utils/audioUtils";
 import cardHoverAudio from "../audio/cardHover.mp3";
 import cardClickAudio from "../audio/cardClick.mp3";
+import "./Card.css";
 
 function CardPress(cardData, typeName) {
   playAudio(cardClickAudio, 1);
