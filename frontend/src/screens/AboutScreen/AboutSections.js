@@ -64,70 +64,94 @@ function AboutSections({ section }) {
         </>
       );
     case "University":
-      return (
-        <>
-          <h2 className="about-section">University Experience</h2>
-          <p>
-            I earned my Bachelor of Science in Computer Science from the
-            University of California, San Diego, graduating in January 2022. My
-            time at UCSD was marked by a rigorous academic curriculum, hands-on
-            projects, and active involvement in the campus tech community.
-          </p>
-          <h2 className="about-section">Relevant Coursework</h2>
-          <ul>
-            <li>
-              <b>Advanced Data Structures and Algorithms</b> – mastering
-              efficient problem-solving techniques
-            </li>
-            <li>
-              <b>Software Engineering</b> – learning best practices for
-              scalable, maintainable code
-            </li>
-            <li>
-              <b>Software System Design &amp; Implementation</b> – building
-              robust, real-world applications
-            </li>
-            <li>
-              <b>Computer Networks</b> – understanding protocols and distributed
-              systems
-            </li>
-            <li>
-              <b>Principles of Computer Operating Systems</b> – exploring OS
-              architecture and resource management
-            </li>
-            <li>
-              <b>Computer Graphics and Rendering</b> – creating visually
-              compelling digital content
-            </li>
-            <li>
-              <b>Computer Animation</b> – bringing interactive experiences to
-              life
-            </li>
-            <li>
-              <b>3D User Interaction</b> – designing intuitive interfaces for
-              immersive environments
-            </li>
-            <li>
-              <b>Virtual Reality / Augmented Reality Research</b> –
-              investigating cutting-edge XR technologies
-            </li>
-          </ul>
-          <h2 className="about-section">Extracurricular Activities</h2>
-          <ul>
-            <li>
-              <b>Triton XR</b>: Served as Lead Software Developer, where I
-              organized technical workshops and led the development of the
-              organization’s website, fostering a collaborative environment for
-              students passionate about extended reality.
-            </li>
-            <li>
-              <b>ACM UCSD</b>: Active member, participating in coding
-              competitions, hackathons, and collaborative software projects that
-              honed my teamwork and problem-solving skills.
-            </li>
-          </ul>
-        </>
-      );
+    return (
+      <>
+        <h2 className="about-section">University</h2>
+        <p>
+          I earned my Bachelor of Science in Computer Science from the
+          University of California, San Diego, graduating in January 2022. My
+          time at UCSD was marked by a rigorous academic curriculum, hands-on
+          projects, and active involvement in the campus tech community.
+        </p>
+        <h2 className="about-section">Relevant Coursework</h2>
+        <ul>
+          <li>
+            <div>
+              <b>Advanced Data Structures and Algorithms</b>
+            </div>
+            mastering efficient problem-solving techniques
+          </li>
+          <li>
+            <div>
+              <b>Software Engineering</b>
+            </div>
+            learning best practices for scalable, maintainable code
+          </li>
+          <li>
+            <div>
+              <b>Software System Design &amp; Implementation</b>
+            </div>
+            building robust, real-world applications
+          </li>
+          <li>
+            <div>
+              <b>Computer Networks</b>
+            </div>
+            understanding protocols and distributed systems
+          </li>
+          <li>
+            <div>
+              <b>Principles of Computer Operating Systems</b>
+            </div>
+            exploring OS architecture and resource management
+          </li>
+          <li>
+            <div>
+              <b>Computer Graphics and Rendering</b>
+            </div>
+            creating visually compelling digital content
+          </li>
+          <li>
+            <div>
+              <b>Computer Animation</b>
+            </div>
+            bringing interactive experiences to life
+          </li>
+          <li>
+            <div>
+              <b>3D User Interaction</b>
+            </div>
+            designing intuitive interfaces for immersive environments
+          </li>
+          <li>
+            <div>
+              <b>Virtual Reality / Augmented Reality Research</b>
+            </div>
+            investigating cutting-edge XR technologies
+          </li>
+        </ul>
+        <h2 className="about-section">Extracurricular Activities</h2>
+        <ul>
+          <li>
+            <div>
+              <b>Triton XR</b>
+            </div>
+            Served as Lead Software Developer, where I organized technical
+            workshops and led the development of the organization’s website,
+            fostering a collaborative environment for students passionate about
+            extended reality.
+          </li>
+          <li>
+            <div>
+              <b>ACM UCSD</b>
+            </div>
+            Active member, participating in coding competitions, hackathons, and
+            collaborative software projects that honed my teamwork and
+            problem-solving skills.
+          </li>
+        </ul>
+      </>
+    );
     case "Career":
       return (
         <>
