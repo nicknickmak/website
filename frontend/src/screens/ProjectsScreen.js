@@ -1,7 +1,4 @@
-import { useEffect } from "react";
 import Carousel from "../components/Carousel";
-import { useDispatch, useSelector } from "react-redux";
-import { listProjects } from "../actions/projectActions";
 
 import "./carousel.css";
 import data from "../data";
