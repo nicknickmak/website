@@ -1,6 +1,7 @@
 const data = {
   projects: [
     {
+      _id: "project-0",
       number: 0,
       name: "Virus Shooter",
       role: "Main Developer",
@@ -15,6 +16,7 @@ const data = {
       active: true,
     },
     {
+      _id: "project-1",
       number: 1,
       name: "BulkUP E-commerce Web App",
       role: "Developer and Designer",
@@ -29,6 +31,7 @@ const data = {
       active: true,
     },
     {
+      _id: "project-2",
       number: 2,
       name: "Wear a Mask!",
       role: "Main Developer",
@@ -43,6 +46,7 @@ const data = {
       active: true,
     },
     {
+      _id: "project-3",
       number: 3,
       name: "Jelly Bumper",
       role: "Main Developer",
@@ -57,6 +61,7 @@ const data = {
       active: true,
     },
     {
+      _id: "project-4",
       number: 4,
       name: "Tetris (Desktop)",
       role: "Developer",
@@ -71,6 +76,7 @@ const data = {
       active: true,
     },
     {
+      _id: "project-5",
       number: 5,
       name: "Rock Paper Scissors Lizard Spock",
       role: "Developer",
@@ -85,6 +91,7 @@ const data = {
       active: true,
     },
     {
+      _id: "project-6",
       number: 6,
       name: "SOTA Cyberdragons Robotics Team",
       role: "Founder, Programmer, Mechanical Engineer",
@@ -101,6 +108,7 @@ const data = {
   ],
   experiences: [
     {
+      _id: "experience-0",
       number: 0,
       name: "Microsoft",
       role: "Software Engineer",
@@ -115,6 +123,7 @@ const data = {
       active: true,
     },
     {
+      _id: "experience-1",
       number: 1,
       name: "Microsoft (Internship)",
       role: "Software Engineer Intern",
@@ -129,6 +138,7 @@ const data = {
       active: true,
     },
     {
+      _id: "experience-2",
       number: 2,
       name: "Toasty",
       role: "Software Engineering Intern",
@@ -143,6 +153,7 @@ const data = {
       active: false,
     },
     {
+      _id: "experience-3",
       number: 3,
       name: "Triton XR",
       role: "Main Software Developer",
@@ -157,6 +168,7 @@ const data = {
       active: true,
     },
     {
+      _id: "experience-4",
       number: 4,
       name: "BulkUP E-commerce Web App",
       role: "Developer and Designer",
@@ -171,6 +183,7 @@ const data = {
       active: false,
     },
     {
+      _id: "experience-5",
       number: 5,
       name: "Robolink",
       role: "Robotics Instructor",
@@ -185,6 +198,7 @@ const data = {
       active: true,
     },
     {
+      _id: "experience-6",
       number: 6,
       name: "IEEE",
       role: "Project Lead",
@@ -199,6 +213,7 @@ const data = {
       active: false,
     },
     {
+      _id: "experience-7",
       number: 7,
       name: "The Taylor Collaboration",
       role: "Engineering Intern",
