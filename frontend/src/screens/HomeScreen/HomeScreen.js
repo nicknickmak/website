@@ -42,6 +42,10 @@ export default function HomeScreen() {
           metrics to stakeholders and mentoring teams in engineering best
           practices.
         </p>
+        <br></br>
+        <a href="/about" className="page-link">
+          (Read more)
+        </a>
       </section>
       <section className="home-section home-services">
         <h2 className="home-section-title">Projects</h2>
@@ -49,13 +53,28 @@ export default function HomeScreen() {
           Explore some of my recent work, including web apps, open-source
           contributions, and personal projects.
         </p>
+
+        <br></br>
+        <a href="/projects" className="page-link">
+          (View all projects)
+        </a>
       </section>
       <section className="home-section home-contact">
         <h2 className="home-section-title">Contact</h2>
         <p className="home-section-text">
-          Interested in working together or want to connect? Reach out via email
-          or the contact form.
+          Interested in working together or want to connect?
+          <nav className="home-nav">
+            <div className="row center sm">
+              <a href="https://www.linkedin.com/in/nick-l-mak/" target="_blank">
+                <img className="social" src={LinkedIn} alt="LinkedIn"></img>
+              </a>
+              <a href="https://github.com/nmakucsd" target="_blank">
+                <img className="social" src={Github} alt="Github"></img>
+              </a>
+            </div>
+          </nav>
         </p>
+        <br></br>
       </section>
     </div>
   );
