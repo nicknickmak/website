@@ -1,15 +1,8 @@
 import "./resume.css";
 
-import loadin1Audio from "../../audio/loadin1.mp3";
-
-var loadin1 = new Audio();
-
-loadin1.src = loadin1Audio;
-loadin1.volume = 0.5;
-
 export default function ResumeScreen() {
   return (
-    <div className="row center fadein" onLoad={() => loadin1.play()}>
+    <div className="row center fadein">
       <head>
         <link
           href="https://fonts.googleapis.com/css?family=Lato"
