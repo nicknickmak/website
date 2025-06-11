@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import SpecialButton from "../components/SpecialButton";
-
 import { useDispatch, useSelector } from "react-redux";
+import CardDetails from "../components/CardDetails";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { detailsProject } from "../actions/projectActions";
+import { useIsMobile } from "../utils/useIsMobile";
 
 export default function ProjectScreen(props) {
   const dispatch = useDispatch();
@@ -16,48 +16,16 @@ export default function ProjectScreen(props) {
     dispatch(detailsProject(projectId));
   }, [dispatch, projectId]);
 
+  const isMobile = useIsMobile();
+
   return (
     <div>
       {loading ? (
-        <LoadingBox></LoadingBox>
+        <LoadingBox />
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
-        <div className="notHome">
-          <div className="col-1 fadein">
-            <div className="row top">
-              <div className="col-1">
-                <div className="imageCard">
-                  <div className="imageCover">
-                    <h1>{project.name}</h1>
-                    <p>{project.date}</p>
-                  </div>
-                  <img
-                    className="large"
-                    src={project.image}
-                    alt={project.name}
-                  ></img>
-                </div>
-              </div>
-              <div className="col-1">
-                <ul>
-                  <li>
-                    <h1>{project.name}</h1>
-                  </li>
-                  <li>{project.tech}</li>
-                  <br></br>
-                  <li>
-                    Description:
-                    <p>{project.description}</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="row center">
-              <SpecialButton purpose={project}></SpecialButton>
-            </div>
-          </div>
-        </div>
+        <CardDetails cardDetails={project} isMobile={isMobile} />
       )}
     </div>
   );
