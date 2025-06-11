@@ -1,4 +1,5 @@
 import SpecialButton from "./SpecialButton";
+import "./CardDetails.css";
 
 function CardDetails({ cardDetails, isMobile }) {
   return (

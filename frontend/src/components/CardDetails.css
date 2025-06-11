@@ -21,7 +21,7 @@
     object-fit: cover;
   }
 
-p {
+  p {
     position: absolute;
     left: 0;
     right: 0;
@@ -37,8 +37,7 @@ p {
       rgba(0, 0, 0, 0.616) 75%,
       rgba(0, 0, 0, 0) 100%
     );
-}
-
+  }
 }
 
 .imageCard h1 {
@@ -49,5 +48,5 @@ p {
 }
 
 .details-body {
-    margin: 3rem;
+  margin: 3rem;
 }

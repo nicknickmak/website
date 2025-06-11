@@ -4,7 +4,6 @@ import CardDetails from "../../components/CardDetails";
 import LoadingBox from "../../components/LoadingBox";
 import MessageBox from "../../components/MessageBox";
 import { detailsExperience } from "../../actions/experienceActions";
-import "./card-details.css";
 import { useIsMobile } from "../../utils/useIsMobile";
 
 export default function ExperienceScreen(props) {
