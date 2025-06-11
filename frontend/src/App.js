@@ -117,70 +117,77 @@ function App() {
    * Renders the main navigation bar for the application.
    * @returns {JSX.Element} The rendered navigation bar as a React fragment containing NavLink components.
    */
-  function MainNavBar() {
-    const navLinks = [
-      {
-        to: "/resume",
-        label: "RESUME",
-      },
-      {
-        to: "/about",
-        label: "ABOUT ME",
-      },
-      {
-        to: "/",
-        label: "NICK MAK",
-        isBrand: true,
-        exact: true,
-      },
-      {
-        to: "/experiences",
-        label: "EXPERIENCE",
-      },
-      {
-        to: "/projects",
-        label: "PROJECTS",
-      },
-    ];
+function MainNavBar() {
+  const navLinks = [
+    {
+      to: "/resume",
+      label: "RESUME",
+    },
+    {
+      to: "/about",
+      label: "ABOUT ME",
+    },
+    {
+      to: "/",
+      label: "NICK MAK",
+      isBrand: true,
+      exact: true,
+    },
+    {
+      to: "/experiences",
+      label: "EXPERIENCE",
+    },
+    {
+      to: "/projects",
+      label: "PROJECTS",
+    },
+  ];
 
-    return (
-      <>
-        {navLinks.map((link) =>
-          link.isBrand ? (
-            <NavLink
-              key={link.to}
-              className="navItem navCenter"
-              exact={link.exact}
-              to={link.to}
-              activeStyle={{ backgroundColor: "transparent" }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
-            >
-              <div className="brand"></div>
-              <div className="brandText">{link.label}</div>
-            </NavLink>
-          ) : (
-            <NavLink
-              key={link.to}
-              className="navItem"
-              to={link.to}
-              activeStyle={{
-                color: "#eaeeb2",
-                backgroundColor: "transparent",
-              }}
-              onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => {
-                playAudio(downAudio);
-                playAudio(loadin1Audio);
-              }}
-            >
-              <div className="navButton">{link.label}</div>
-            </NavLink>
-          )
-        )}
-      </>
-    );
-  }
+  // Scroll to top on navigation
+  const handleNavClick = () => {
+    window.scrollTo(0, 0);
+  };
+
+  return (
+    <>
+      {navLinks.map((link) =>
+        link.isBrand ? (
+          <NavLink
+            key={link.to}
+            className="navItem navCenter"
+            exact={link.exact}
+            to={link.to}
+            activeStyle={{ backgroundColor: "transparent" }}
+            onMouseEnter={() => playAudio(hoverAudio)}
+            onMouseUp={() => playAudio(downAudio)}
+            onClick={handleNavClick}
+          >
+            <div className="brand"></div>
+            <div className="brandText">{link.label}</div>
+          </NavLink>
+        ) : (
+          <NavLink
+            key={link.to}
+            className="navItem"
+            to={link.to}
+            activeStyle={{
+              color: "#eaeeb2",
+              backgroundColor: "transparent",
+            }}
+            onMouseEnter={() => playAudio(hoverAudio)}
+            onMouseUp={() => {
+              playAudio(downAudio);
+              playAudio(loadin1Audio);
+            }}
+            onClick={handleNavClick}
+          >
+            <div className="navButton">{link.label}</div>
+          </NavLink>
+        )
+      )}
+    </>
+  );
+}
 
   return isMobile ? MobileApp() : DesktopApp();
 }
