@@ -64,7 +64,7 @@ function App() {
     );
   }
 
-  function loadMobileApp() {
+  function MobileApp() {
     if (!isMobile) {
       return;
     }
@@ -83,7 +83,7 @@ function App() {
     );
   }
 
-  function loadWebApp() {
+  function DesktopApp() {
     if (isMobile) {
       return;
     }
@@ -182,7 +182,7 @@ function App() {
     );
   }
 
-  return isMobile ? loadMobileApp() : loadWebApp();
+  return isMobile ? MobileApp() : DesktopApp();
 }
 
 export default App;
