@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/nmakucsd/new-website/issues"
   },
-  "homepage": "https://github.com/nmakucsd/new-website#readme",
+  "homepage": "https://nicknickmak.github.io/website/",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
