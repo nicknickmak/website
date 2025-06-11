@@ -115,67 +115,63 @@ function App() {
    * @returns {JSX.Element} The rendered navigation bar as a React fragment containing NavLink components.
    */
   function MainNavBar() {
+    const navLinks = [
+      {
+        to: "/resume",
+        label: "RESUME",
+      },
+      {
+        to: "/about",
+        label: "ABOUT ME",
+      },
+      {
+        to: "/",
+        label: "NICK MAK",
+        isBrand: true,
+        exact: true,
+      },
+      {
+        to: "/experiences",
+        label: "EXPERIENCE",
+      },
+      {
+        to: "/projects",
+        label: "PROJECTS",
+      },
+    ];
+
     return (
       <>
-        <NavLink
-          className="navItem"
-          to="/resume"
-          activeStyle={{
-            color: "#eaeeb2",
-            backgroundColor: "transparent",
-          }}
-          onMouseEnter={() => playAudio(hoverAudio)}
-          onMouseUp={() => playAudio(downAudio)}
-        >
-          <div className="navButton">RESUME</div>
-        </NavLink>
-        <NavLink
-          className="navItem"
-          to="/about"
-          activeStyle={{
-            color: "#eaeeb2",
-            backgroundColor: "transparent",
-          }}
-          onMouseEnter={() => playAudio(hoverAudio)}
-          onMouseUp={() => playAudio(downAudio)}
-        >
-          <div className="navButton">ABOUT ME</div>
-        </NavLink>
-        <NavLink
-          className="navItem navCenter"
-          exact
-          to="/"
-          activeStyle={{ backgroundColor: "transparent" }}
-          onMouseEnter={() => playAudio(hoverAudio)}
-          onMouseUp={() => playAudio(downAudio)}
-        >
-          <div className="brand" activeStyle={{ opacity: "0.5px" }}></div>
-          <div className="brandText">NICK MAK</div>
-        </NavLink>
-        <NavLink
-          className="navItem"
-          to="/experiences"
-          activeStyle={{
-            color: "#eaeeb2",
-            backgroundColor: "transparent",
-          }}
-          onMouseEnter={() => playAudio(hoverAudio)}
-          onMouseUp={() => playAudio(downAudio)}
-        >
-          <div className="navButton">EXPERIENCE</div>
-        </NavLink>
-        <NavLink
-          className="navItem"
-          to="/projects"
-          activeStyle={{
-            color: "#eaeeb2",
-            backgroundColor: "transparent",
-          }}
-          onMouseEnter={() => playAudio(hoverAudio)}
-          onMouseUp={() => playAudio(downAudio)}
-        >
-          <div className="navButton">PROJECTS</div>
-        </NavLink>
+        {navLinks.map((link, idx) =>
+          link.isBrand ? (
+            <NavLink
+              key={link.to}
+              className="navItem navCenter"
+              exact={link.exact}
+              to={link.to}
+              activeStyle={{ backgroundColor: "transparent" }}
+              onMouseEnter={() => playAudio(hoverAudio)}
+              onMouseUp={() => playAudio(downAudio)}
+            >
+              <div className="brand"></div>
+              <div className="brandText">{link.label}</div>
+            </NavLink>
+          ) : (
+            <NavLink
+              key={link.to}
+              className="navItem"
+              to={link.to}
+              activeStyle={{
+                color: "#eaeeb2",
+                backgroundColor: "transparent",
+              }}
+              onMouseEnter={() => playAudio(hoverAudio)}
+              onMouseUp={() => playAudio(downAudio)}
+            >
+              <div className="navButton">{link.label}</div>
+            </NavLink>
+          )
+        )}
       </>
     );
   }
