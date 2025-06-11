@@ -28,6 +28,7 @@ export default function ProjectsScreen() {
       isLoading={isLoading}
       error={error}
       items={projects}
+      typeName="project"
     />
   );
 }

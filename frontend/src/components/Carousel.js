@@ -11,7 +11,7 @@ import MessageBox from "./MessageBox";
 import { playAudio } from "../utils/audioUtils";
 import cardHoverAudio from "../audio/cardHover.mp3";
 import cardOpenAudio from "../audio/cardOpen.mp3";
-import Experience from "./Experience";
+import Card from "./Card";
 
 /**
  * Carousel component that displays a collection of items in a slider format.
@@ -22,9 +22,10 @@ import Experience from "./Experience";
  * @param {boolean} props.isLoading - Indicates if the carousel is currently loading.
  * @param {string} props.error - Error message to display if an error occurs.
  * @param {Array} props.items - Array of items to display in the carousel.
+ * @param {string} props.typeName - The type name used in the card links.
  * @returns {JSX.Element} The rendered Carousel component.
  */
-export default function Carousel({ title, isLoading, error, items }) {
+export default function Carousel({ title, isLoading, error, items, typeName }) {
   useEffect(() => {
     playAudio(cardOpenAudio, 0.5);
   }, []);
@@ -54,7 +55,7 @@ export default function Carousel({ title, isLoading, error, items }) {
                 <div className="row center">
                   {items.map((item, idx) => (
                     <Slide index={item.number} key={item.number || idx}>
-                      <Experience experience={item} />
+                      <Card cardData={item} typeName={typeName} />
                     </Slide>
                   ))}
                 </div>

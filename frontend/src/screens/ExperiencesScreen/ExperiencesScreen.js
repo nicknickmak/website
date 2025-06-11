@@ -28,6 +28,7 @@ export default function ExperiencesScreen() {
       isLoading={isLoading}
       error={error}
       items={experiences}
+      typeName="experience"
     />
   );
 }
