@@ -1,16 +1,10 @@
 import { useEffect } from "react";
 import SpecialButton from "../components/SpecialButton";
 
-import loadin1Audio from "../audio/loadin1.mp3";
 import { useDispatch, useSelector } from "react-redux";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { detailsProject } from "../actions/projectActions";
-
-var loadin1 = new Audio();
-
-loadin1.src = loadin1Audio;
-loadin1.volume = 0.5;
 
 export default function ProjectScreen(props) {
   const dispatch = useDispatch();
@@ -30,7 +24,7 @@ export default function ProjectScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div className="notHome">
-          <div className="col-1 fadein" onLoad={() => loadin1.play()}>
+          <div className="col-1 fadein">
             <div className="row top">
               <div className="col-1">
                 <div className="imageCard">
