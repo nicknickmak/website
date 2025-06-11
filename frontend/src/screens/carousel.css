@@ -44,7 +44,7 @@
   transition: all 0.2s ease-in-out;
   padding-bottom: 0;
   overflow: hidden;
-  margin: 0 19px;
+  margin: 0 -29px;
 }
 
 .carousel-2 {
@@ -55,7 +55,7 @@
   transition: all 0.2s ease-in-out;
   padding-bottom: 0;
   overflow: hidden;
-  margin: 0 19px;
+  margin: 0 -29px;
 }
 .slider {
   transition: all 0.2s ease-in-out;
