@@ -10,6 +10,7 @@ import ResumeScreen from "./screens/ResumeScreen/ResumeScreen";
 
 import hoverAudio from "./audio/HoverClick.mp3";
 import downAudio from "./audio/downClick.mp3";
+import loadin1Audio from "./audio/loadin1.mp3";
 import InspirationScreen from "./screens/InspirationScreen";
 
 import LinkedIn from "./images/LinkedIn.png";
@@ -142,7 +143,7 @@ function App() {
 
     return (
       <>
-        {navLinks.map((link, idx) =>
+        {navLinks.map((link) =>
           link.isBrand ? (
             <NavLink
               key={link.to}
@@ -166,7 +167,10 @@ function App() {
                 backgroundColor: "transparent",
               }}
               onMouseEnter={() => playAudio(hoverAudio)}
-              onMouseUp={() => playAudio(downAudio)}
+              onMouseUp={() => {
+                playAudio(downAudio);
+                playAudio(loadin1Audio);
+              }}
             >
               <div className="navButton">{link.label}</div>
             </NavLink>
