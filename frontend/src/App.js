@@ -47,6 +47,23 @@ function App() {
     );
   }
 
+  /**
+   * Renders the background animation for the application.
+   * @returns {JSX.Element} The background animation component.
+   */
+  function BackgroundAnimation() {
+    return (
+      <>
+        <div className="background">
+          {balls.map((num) => (
+            <div key={num} className={`floating-ball ball${num}`}></div>
+          ))}
+        </div>
+        {/* <div className="backgroundLogo"></div> */}
+      </>
+    );
+  }
+
   function loadMobileApp() {
     if (!isMobile) {
       return;
@@ -55,12 +72,7 @@ function App() {
     return (
       <BrowserRouter>
         <div class="mobile-browser">
-          <div className="background">
-            {balls.map((num) => (
-              <div key={num} className={`floating-ball ball${num}`}></div>
-            ))}
-          </div>
-          {/* <div className="backgroundLogo"></div> */}
+          {BackgroundAnimation()}
 
           <div className="grid-container">
             <main>{AppRoutes()}</main>
@@ -78,13 +90,7 @@ function App() {
     return (
       <BrowserRouter>
         <div class="desktop-browser">
-          <div className="background">
-            {balls.map((num) => (
-              <div key={num} className={`floating-ball ball${num}`}></div>
-            ))}
-          </div>
-          {/* <div className="backgroundLogo"></div> */}
-
+          {BackgroundAnimation()}
           <div className="grid-container">
             <header className="row">{MainNavBar()}</header>
             <main>{AppRoutes()}</main>
