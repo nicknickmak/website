@@ -29,52 +29,56 @@ export default function ProjectsScreen() {
 
     const { loading, error, projects } = useProjects();
     return (
-        <div>
-            {loading ? <LoadingBox></LoadingBox>
-                :
-                error ? <MessageBox variant="danger">{error}</MessageBox>
-                    :
-                    <div className="Home fadein" onLoad={() => playAudio(cardOpenAudio, 0.1)}>
-                        <div className="col-2">
-                            <div className="row center bottomline">
-                                <div className="title">PROJECTS</div>
-                            </div>
+      <div>
+        {loading ? (
+          <LoadingBox></LoadingBox>
+        ) : error ? (
+          <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
+          <div
+            className="Home fadein"
+            onLoad={() => playAudio(cardOpenAudio, 0.1)}
+          >
+            <div className="col-2">
+              <div className="row center bottomline">
+                <div className="title">PROJECTS</div>
+              </div>
 
-                            {/*Idea: have left right buttons be invisible over left and right cards in order to move them left or right upon click */}
-                            <CarouselProvider
-                                className="carousel"
-                                // currentSlide='0'
-                                totalSlides={7}>
+              {/*Idea: have left right buttons be invisible over left and right cards in order to move them left or right upon click */}
+              <CarouselProvider
+                className="carousel"
+                // currentSlide='0'
+                totalSlides={7}
+              >
+                <Slider classNameAnimation="slider" classNameTray="tray6">
+                  <div className="row center">
+                    {projects.map((project) => (
+                      <Slide
+                        // className="slide"
 
-                                <Slider
-                                    classNameAnimation="slider"
-                                    classNameTray="tray6"
-                                >
-                                    <div className="row center">
-                                        {
-                                            projects.map((project) => (
-                                                <Slide
-                                                    // className="slide" 
-
-                                                    index={project.number}
-                                                >
-                                                    <Project key={project._id} project={project}></Project>
-                                                </Slide>
-                                            ))
-                                        }
-                                    </div>
-                                </Slider>
-                                <ButtonBack className="buttonBack" onMouseUp={() => playAudio(cardHoverAudio, 1)}>
-                                    <img src="/images/right_arrow.png" alt="<"></img>
-                                </ButtonBack>
-                                <ButtonNext className="buttonNext" onMouseUp={() => playAudio(cardHoverAudio, 1)}>
-                                    <img src="/images/right_arrow.png" alt=">"></img>
-                                </ButtonNext>
-                            </CarouselProvider>
-                        </div>
-                    </div>
-            }
-
-        </div>
+                        index={project.number}
+                      >
+                        <Project key={project._id} project={project}></Project>
+                      </Slide>
+                    ))}
+                  </div>
+                </Slider>
+                <ButtonBack
+                  className="buttonBack"
+                  onMouseUp={() => playAudio(cardHoverAudio, 1)}
+                >
+                  <img src="/images/right_arrow.png" alt="<"></img>
+                </ButtonBack>
+                <ButtonNext
+                  className="buttonNext"
+                  onMouseUp={() => playAudio(cardHoverAudio, 1)}
+                >
+                  <img src="/images/right_arrow.png" alt=">"></img>
+                </ButtonNext>
+              </CarouselProvider>
+            </div>
+          </div>
+        )}
+      </div>
     );
 }

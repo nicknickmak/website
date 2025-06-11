@@ -29,50 +29,54 @@ export default function ExperiencesScreen() {
 
     const { loading, error, experiences } = useFetchExperiences();
     return (
-        <div>
-            {loading ? <LoadingBox></LoadingBox>
-                :
-                error ? <MessageBox variant="danger">{error}</MessageBox>
-                    :
-                    <div className="Home fadein" onLoad={() => playAudio(cardOpenAudio, 0.05)}>
-                        <div className="col-2">
-                            <div className="row center bottomline">
-                                <div className="title">EXPERIENCE</div>
-                            </div>
-                            {/*Idea: have left right buttons be invisible over left and right cards in order to move them left or right upon click */}
-                            <CarouselProvider
-                                className="carousel"
-                                totalSlides={8}>
+      <div>
+        {loading ? (
+          <LoadingBox></LoadingBox>
+        ) : error ? (
+          <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
+          <div
+            className="Home fadein"
+            onLoad={() => playAudio(cardOpenAudio, 0.05)}
+          >
+            <div className="col-2">
+              <div className="row center bottomline">
+                <div className="title">EXPERIENCE</div>
+              </div>
+              {/*Idea: have left right buttons be invisible over left and right cards in order to move them left or right upon click */}
+              <CarouselProvider className="carousel" totalSlides={8}>
+                <Slider classNameAnimation="slider" classNameTray="tray8">
+                  <div className="row center">
+                    {experiences.map((experience) => (
+                      <Slide
+                        // className="slide"
 
-                                <Slider
-                                    classNameAnimation="slider"
-                                    classNameTray="tray8"
-                                >
-                                    <div className="row center">
-                                        {
-                                            experiences.map((experience) => (
-                                                <Slide
-                                                    // className="slide" 
-
-                                                    index={experience.number}
-                                                >
-                                                    <Experience key={experience._id} experience={experience}></Experience>
-                                                </Slide>
-                                            ))
-                                        }
-                                    </div>
-                                </Slider>
-                                <ButtonBack className="buttonBack" onMouseUp={() => playAudio(cardHoverAudio, 1)}>
-                                    <img src="/images/right_arrow.png" alt="<"></img>
-                                </ButtonBack>
-                                <ButtonNext className="buttonNext" onMouseUp={() => playAudio(cardHoverAudio, 1)}>
-                                    <img src="/images/right_arrow.png" alt=">"></img>
-                                </ButtonNext>
-                            </CarouselProvider>
-                        </div>
-                    </div>
-            }
-
-        </div>
+                        index={experience.number}
+                      >
+                        <Experience
+                          key={experience._id}
+                          experience={experience}
+                        ></Experience>
+                      </Slide>
+                    ))}
+                  </div>
+                </Slider>
+                <ButtonBack
+                  className="buttonBack"
+                  onMouseUp={() => playAudio(cardHoverAudio, 1)}
+                >
+                  <img src="/images/right_arrow.png" alt="<"></img>
+                </ButtonBack>
+                <ButtonNext
+                  className="buttonNext"
+                  onMouseUp={() => playAudio(cardHoverAudio, 1)}
+                >
+                  <img src="/images/right_arrow.png" alt=">"></img>
+                </ButtonNext>
+              </CarouselProvider>
+            </div>
+          </div>
+        )}
+      </div>
     );
 }
