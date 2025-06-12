@@ -2,22 +2,25 @@ import { playAudio } from "../utils/audioUtils";
 import cardHoverAudio from "../audio/cardHover.mp3";
 import cardClickAudio from "../audio/cardClick.mp3";
 import "./Card.css";
-
-function CardPress(cardData, typeName) {
-  playAudio(cardClickAudio, 1);
-  setTimeout(function () {
-    window.location.href = `/${typeName}/${cardData._id}`;
-  }, 700);
-}
+import { useHistory } from "react-router-dom";
 
 export default function Card({ cardData, typeName }) {
+  const history = useHistory();
+
+  function CardPress() {
+    playAudio(cardClickAudio, 1);
+    setTimeout(function () {
+      history.push(`/${typeName}/${cardData._id}`);
+    }, 700);
+  }
+
   return (
     <div
       key={cardData._id}
       className="card"
       tabIndex="-1" //this enables the glow to happen when clicked
       onMouseEnter={() => playAudio(cardHoverAudio, 1)}
-      onMouseUp={() => CardPress(cardData, typeName)}
+      onMouseUp={CardPress}
     >
       <div className="card-head">
         <img className="card-image" src={cardData.image} alt={cardData.name} />

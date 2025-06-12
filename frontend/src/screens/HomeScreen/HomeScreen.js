@@ -3,6 +3,7 @@ import "./HomeScreen.css";
 
 import LinkedIn from "../../images/LinkedIn.png";
 import Github from "../../images/Github.png";
+import { Link } from "react-router-dom";
 
 export default function HomeScreen() {
   return (
@@ -50,10 +51,9 @@ export default function HomeScreen() {
           metrics to stakeholders and mentoring teams in engineering best
           practices.
         </p>
-        <br></br>
-        <a href="/about" className="page-link">
+        <Link to="/about" className="page-link">
           (Read more)
-        </a>
+        </Link>
       </section>
       <section className="home-section home-services">
         <h2 className="home-section-title">Projects</h2>
@@ -63,9 +63,9 @@ export default function HomeScreen() {
         </p>
 
         <br></br>
-        <a href="/projects" className="page-link">
+        <Link to="/projects" className="page-link">
           (View all projects)
-        </a>
+        </Link>
       </section>
       <section className="home-section home-contact">
         <h2 className="home-section-title">Contact</h2>
