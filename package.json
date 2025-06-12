@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/nicknickmak/new-website/issues"
   },
-  "homepage": "https://nicknickmak.github.io/",
+  "homepage": "http://nickmak.com/",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
