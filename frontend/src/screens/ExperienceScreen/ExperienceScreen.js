@@ -1,9 +1,6 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import CardDetails from "../../components/CardDetails";
 import LoadingBox from "../../components/LoadingBox";
 import MessageBox from "../../components/MessageBox";
-import { detailsExperience } from "../../actions/experienceActions";
 import { useIsMobile } from "../../utils/useIsMobile";
 import data from "../../data";
 
