@@ -38,8 +38,8 @@ function App() {
         <Route path="/about" component={AboutScreen}></Route>
         <Route path="/inspiration" component={InspirationScreen}></Route>
         <Route path="/experiences" component={ExperiencesScreen}></Route>
-        <Route path="/experience/:id" component={ExperienceScreen}></Route>
         <Route path="/projects" component={ProjectsScreen}></Route>
+        <Route path="/experience/:id" component={ExperienceScreen}></Route>
         <Route path="/project/:id" component={ProjectScreen}></Route>
         <Route path="/" component={HomeScreen} exact></Route>
       </>
