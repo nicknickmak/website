@@ -21,11 +21,19 @@ export default function BackgroundAnimation() {
       const phi = Math.acos(-1 + (2 * i) / numDots);
       const theta = Math.PI * (1 + Math.sqrt(5)) * i;
 
-      const x = 120 * Math.cos(theta) * Math.sin(phi);
-      const y = 120 * Math.sin(theta) * Math.sin(phi);
-      const z = 120 * Math.cos(phi);
+      const radius = 350; // Radius of the sphere
 
-      dot.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+      const x = radius * Math.cos(theta) * Math.sin(phi);
+      const y = radius * Math.sin(theta) * Math.sin(phi);
+      const z = radius * Math.cos(phi);
+
+      // Get viewport width in pixels
+      const vw = window.innerWidth / 100;
+      // Scale radius relative to viewport width (e.g., 35vw)
+      const scale = (vw * 35) / radius;
+      dot.style.transform = `translate3d(${x * scale}px, ${y * scale}px, ${
+        z * scale
+      }px)`;
       sphere.appendChild(dot);
     }
   }, []);
