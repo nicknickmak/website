@@ -51,6 +51,7 @@ export default function HomeScreen() {
           metrics to stakeholders and mentoring teams in engineering best
           practices.
         </p>
+        <br></br>
         <Link to="/about" className="page-link">
           (Read more)
         </Link>
