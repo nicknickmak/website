@@ -3,15 +3,13 @@ import "./CardDetails.css";
 
 function CardDetails({ cardDetails, isMobile }) {
   return (
-    <div className={`notHome ${isMobile ? "mobile" : ""}`}>
-      <div className="col-1">
-        <div className="imageCard">
-          <div className="imageCover">
-            <h1>{cardDetails.name}</h1>
-            <p>{cardDetails.date}</p>
-          </div>
-          <img src={cardDetails.image} alt={cardDetails.name}></img>
+    <div className={`notHome card-details ${isMobile ? "mobile" : ""}`}>
+      <div className="imageCard">
+        <div className="imageCover">
+          <h1>{cardDetails.name}</h1>
+          <p>{cardDetails.date}</p>
         </div>
+        <img src={cardDetails.image} alt={cardDetails.name}></img>
       </div>
       <div className="details-body">
         <ul>
