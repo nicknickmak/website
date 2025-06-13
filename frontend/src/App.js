@@ -86,7 +86,7 @@ function App() {
                   <img className="social" src={LinkedIn} alt="LinkedIn"></img>
                 </a>
                 <a
-                  href="https://github.com/nmakucsd"
+                  href="https://github.com/nicknickmak"
                   target="_blank"
                   rel="noreferrer"
                 >
