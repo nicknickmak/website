@@ -5,7 +5,38 @@
 const data = {
   projects: [
     {
+      _id: "project-0",
       number: 0,
+      name: "Peer Pressure",
+      role: "Full-Stack Software Engineer",
+      tech: "React, Next.js, Typescript, Prisma, PostgreSQL, NextAuth, TailwindCSS, WebSockets",
+      image: "/images/peer_pressure.png",
+      date: "November 2025",
+      dateShort: "11/2025",
+      description:
+        "Peer Pressure is a social accountability application that allows you to plan today and tomorrow's daily tasks and view your friends' tasks to promote peer motivation and accountability.",
+      link: "https://peer-pressure-virid.vercel.app/",
+      action: "Go to Project",
+      active: true,
+    },
+    {
+      _id: "project-1",
+      number: 1,
+      name: "PowerAI",
+      role: "Full-Stack Software Engineer",
+      tech: "OpenAI, RAG, Prompt Engineering, Python, FastAPI, React, FAISS, PostgreSQL",
+      image: "/images/power_ai.png",
+      date: "August 2025",
+      dateShort: "8/2025",
+      description:
+        "PowerAI is an AI-powered strength training analytics platform that helps athletes, bodybuilders, and powerlifters make sense of their workout history.",
+      link: "https://power-ai-chi.vercel.app/",
+      action: "Go to Project",
+      active: true,
+    },
+    {
+      _id: "project-2",
+      number: 2,
       name: "Virus Shooter",
       role: "Main Developer",
       tech: "Unity3D, C#",
@@ -19,7 +50,8 @@ const data = {
       active: true,
     },
     {
-      number: 1,
+      _id: "project-3",
+      number: 3,
       name: "BulkUP E-commerce Web App",
       role: "Developer and Designer",
       tech: "MongoDB, Express, React, Node.js",
@@ -33,7 +65,8 @@ const data = {
       active: true,
     },
     {
-      number: 2,
+      _id: "project-4",
+      number: 4,
       name: "Wear a Mask!",
       role: "Main Developer",
       tech: "Unity3D, C#",
@@ -47,7 +80,8 @@ const data = {
       active: true,
     },
     {
-      number: 3,
+      _id: "project-5",
+      number: 5,
       name: "Jelly Bumper",
       role: "Main Developer",
       tech: "Unity3D, C#",
@@ -61,7 +95,8 @@ const data = {
       active: true,
     },
     {
-      number: 4,
+      _id: "project-6",
+      number: 6,
       name: "Tetris (Desktop)",
       role: "Developer",
       tech: "HTML, CSS, JavaScript",
@@ -75,7 +110,8 @@ const data = {
       active: true,
     },
     {
-      number: 5,
+      _id: "project-7",
+      number: 7,
       name: "Rock Paper Scissors Lizard Spock",
       role: "Developer",
       tech: "HTML, CSS, JavaScript",
@@ -89,7 +125,8 @@ const data = {
       active: true,
     },
     {
-      number: 6,
+      _id: "project-8",
+      number: 8,
       name: "SOTA Cyberdragons Robotics Team",
       role: "Founder, Programmer, Mechanical Engineer",
       tech: "Java, Python, OpenCV",
@@ -105,10 +142,11 @@ const data = {
   ],
   experiences: [
     {
+      _id: "experience-0",
       number: 0,
       name: "Microsoft",
       role: "Software Engineer",
-      tech: "XPay + Bing Ads",
+      tech: "React.js, Angular, Dotnet, Azure Cloud, SQL Server, Azure Copilot (AI)",
       image: "/images/Microsoft.png",
       date: "May 2022 - Present",
       dateShort: "5/2022 - Present",
@@ -119,10 +157,11 @@ const data = {
       active: true,
     },
     {
+      _id: "experience-1",
       number: 1,
       name: "Microsoft (Internship)",
       role: "Software Engineer Intern",
-      tech: "Bing Ads",
+      tech: "Databricks, Apache Spark, Scala, Azure Cloud",
       image: "/images/Microsoft.png",
       date: "June 2021 - September 2021",
       dateShort: "6/2021 - 9/2021",
@@ -133,6 +172,7 @@ const data = {
       active: true,
     },
     {
+      _id: "experience-2",
       number: 2,
       name: "Toasty",
       role: "Software Engineering Intern",
@@ -147,6 +187,7 @@ const data = {
       active: false,
     },
     {
+      _id: "experience-3",
       number: 3,
       name: "Triton XR",
       role: "Main Software Developer",
@@ -161,6 +202,7 @@ const data = {
       active: true,
     },
     {
+      _id: "experience-4",
       number: 4,
       name: "BulkUP E-commerce Web App",
       role: "Developer and Designer",
@@ -175,6 +217,7 @@ const data = {
       active: false,
     },
     {
+      _id: "experience-5",
       number: 5,
       name: "Robolink",
       role: "Robotics Instructor",
@@ -189,6 +232,7 @@ const data = {
       active: true,
     },
     {
+      _id: "experience-6",
       number: 6,
       name: "IEEE",
       role: "Project Lead",
@@ -203,6 +247,7 @@ const data = {
       active: false,
     },
     {
+      _id: "experience-7",
       number: 7,
       name: "The Taylor Collaboration",
       role: "Engineering Intern",

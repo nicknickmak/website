@@ -61,14 +61,18 @@
   transition: all 0.2s ease-in-out;
 }
 
-.tray6{
+/* When you add more trays, adjust the margin-right values below */
+.tray6 {
   margin-right: -1883px;
 }
-.tray7{
+.tray7 {
   margin-right: -1877px;
 }
-.tray8{
+.tray8 {
   margin-right: -2195px;
+}
+.tray9 {
+  margin-right: -2500px;
 }
 
 .tray-2 {
