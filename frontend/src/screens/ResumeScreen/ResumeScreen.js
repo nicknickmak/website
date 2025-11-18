@@ -3,6 +3,34 @@ import "./resume.css";
 export default function ResumeScreen() {
   return (
     <div className="row center fadein">
+      {/* Download Resume Button */}
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "flex-end",
+          marginBottom: 10,
+        }}
+      >
+        <a
+          href="/Nick_Mak_Resume.pdf"
+          download
+          style={{
+            background: "#fff",
+            color: "#222",
+            padding: "8px 16px",
+            borderRadius: "4px",
+            textDecoration: "none",
+            fontWeight: 600,
+            fontSize: "15px",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.08)",
+            margin: "20px",
+            border: "1px solid #ccc",
+          }}
+        >
+          Download PDF
+        </a>
+      </div>
       <head>
         <link
           href="https://fonts.googleapis.com/css?family=Lato"
