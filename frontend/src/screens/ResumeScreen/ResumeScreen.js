@@ -13,147 +13,160 @@ export default function ResumeScreen() {
         <link rel="stylesheet" href="styles.css" />
       </head>
       <div className="resume-body">
-        <div class="resume-container">
-          <div class="resume-header">
-            <h1>Nick Mak</h1>
-            <p>Full Stack Software Engineering | New York, NY</p>
-            <p>
-              (415) 609-9900 |{" "}
-              <a href="mailto:nicknickmak@gmail.com">nicknickmak@gmail.com</a> |
-              LinkedIn:
-              <a href="https://www.linkedin.com/in/nick-l-mak">nick-l-mak</a>
-            </p>
+        <div className="resume-container">
+          <div className="resume-sidebar">
+            <div className="resume-header">
+              <h1>Nick Mak</h1>
+              <p>Full Stack Software Engineer | New York, NY</p>
+              <p>
+                (415) 609-9900 |{" "}
+                <a href="mailto:nicknickmak@gmail.com">nicknickmak@gmail.com</a>{" "}
+                | LinkedIn:
+                <a href="https://www.linkedin.com/in/nick-l-mak">nick-l-mak</a>
+              </p>
+            </div>
+            <section className="skills">
+              <h2>Technical Skills</h2>
+              <p>
+                <strong>Programming Languages:</strong> TypeScript, JavaScript,
+                C++, C#, Python, Java, HTML5, SASS
+              </p>
+              <p>
+                <strong>Frameworks & Technologies:</strong> React, Angular,
+                Node.js, .NET, Azure, GCP, WebSockets, Cosmos DB, PostgreSQL,
+                RAG, FAISS
+              </p>
+            </section>
+            <section className="education">
+              <h2>Education</h2>
+              <p>
+                <strong>B.S. in Computer Science</strong> — University of
+                California San Diego (2018 – 2021)
+              </p>
+            </section>
           </div>
+          <div className="resume-main">
+            <section className="experience">
+              <h2>Summary</h2>
+              <p>
+                Software Engineer with a strong focus on scalable distributed
+                systems and performance optimization. Skilled at breaking down
+                ambiguous challenges, driving clarity across teams, and
+                delivering high-impact technical solutions from concept to
+                production.
+              </p>
+            </section>
 
-          <section class="experience">
-            <h2>Work Experience</h2>
+            <section className="experience">
+              <h2>Work Experience</h2>
 
-            <div class="job">
-              <h3>Software Engineer</h3>
-              <div class="job-basic-info">
-                <p>
-                  <strong>Microsoft</strong> | Remote - New York, NY
-                </p>
-                <p>April 2022 - Present</p>
+              <div className="job">
+                <div className="job-basic-info">
+                  <h3>Software Engineer — Microsoft </h3>
+                  <p> | April 2022 - July 2025 | New York, NY</p>
+                </div>
+                <ul>
+                  <li>
+                    Developed and maintained large-scale full-stack web
+                    infrastructure, reducing latency by 33%.
+                  </li>
+                  <li>
+                    Built features using React, Angular, .NET C#, MS SQL Server,
+                    Azure Cosmos DB, Redis, and microservices.
+                  </li>
+                  <li>
+                    Led UI for internal Ads flighting experimentation tool;
+                    implemented virtual scrolling + caching.
+                  </li>
+                  <li>
+                    Created REST APIs to eliminate manual SQL queries, improving
+                    maintainability and safety.
+                  </li>
+                  <li>
+                    Migrated UI from AngularJS to Angular to improve
+                    maintainability and reduce bugs.
+                  </li>
+                  <li>
+                    Refactored legacy .NET backend logic, removing redundancies
+                    and improving reusability.
+                  </li>
+                  <li>
+                    Used Azure Copilot to build an AI RAG assistant increasing
+                    productivity in the product.
+                  </li>
+                  <li>
+                    Built UI for 1‑click checkout on MSN Shopping page using
+                    React.
+                  </li>
+                  <li>
+                    Integrated Selenium, Moq, and Jest tests for 90% coverage
+                    across FE + BE.
+                  </li>
+                  <li>
+                    Collaborated with directors, PMs, data scientists, and
+                    designers on new features.
+                  </li>
+                </ul>
               </div>
+
+              <div className="job">
+                <div className="job-basic-info">
+                  <h3>Software Engineer Intern — Microsoft</h3>
+                  <p>| Remote | June 2021 - September 2021</p>
+                </div>
+                <ul>
+                  <li>
+                    Built batch‑processing Azure Data Lake pipeline for
+                    onboarding Ads Campaign data.
+                  </li>
+                  <li>
+                    Generated OKR and globalization metrics using Databricks
+                    (Scala).
+                  </li>
+                  <li>
+                    Used Apache Spark, ADF, and Power BI for analysis and
+                    visualization.
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="technical-projects">
+              <h2>Technical Projects</h2>
+
+              <p>
+                <h3>PowerAI</h3>
+                <span className="project-tech-stack">
+                  OpenAI, RAG, FastAPI, React, FAISS, PostgreSQL
+                </span>
+              </p>
               <ul>
                 <li>
-                  Developed full-stack features using Angular, .NET, SQL and
-                  Azure cloud infrastructure.
+                  Built a GenAI service to simplify workout data onboarding and
+                  deliver progress insights.
                 </li>
-
                 <li>
-                  Led the UI development for an internal Ads flighting
-                  experimentation product, enhancing UI/UX functionality and
-                  optimizing the UI experience,by implementing virtual scrolling
-                  and browser caching to reduce latency by 33%.
+                  Implemented hybrid RAG retrieval using FAISS for fuzzy user
+                  inputs.
                 </li>
-
                 <li>
-                  Migrated UI codebase from AngularJS to Angular, to improve
-                  maintainability and minimize bugs.
-                </li>
-
-                <li>
-                  Utilized Azure Copilot to develop an LLM and build an
-                  integrated GenAI service the product.
-                </li>
-
-                <li>
-                  Built UI for 1-click checkout feature on the MSN Shopping page
-                  using React.
-                </li>
-
-                <li>
-                  Integrated end-to-end and unit testing with Selenium and Jest
-                  for 85.2% code coverage in Microsoft Edge Wallet and Payment
-                  Solution codebase.
-                </li>
-
-                <li>
-                  Collaborated with directors, data scientists, designers and
-                  product managers to implement new features and improve
-                  existing ones, ensuring alignment with user needs and business
-                  goals.
+                  Created a personalized AI trainer for adaptive feedback.
                 </li>
               </ul>
-            </div>
-          </section>
 
-          <section class="education">
-            <h2>Education</h2>
-            <p>
-              <strong>B.S. in Computer Science</strong> | University of
-              California, San Diego | January 2022
-            </p>
-          </section>
-
-          <section class="technical-projects">
-            <h2>Technical Projects</h2>
-
-            <p>
-              <strong>nickmak.com Website Portfolio</strong>
-              <span class="project-tech-stack">
-                React, Express, MongoDB, Node.js, HTML+CSS, Google Chart API,
-                Heroku
-              </span>
-            </p>
-            <ul>
-              Developed a personal portfolio website to showcase my experience
-              and projects, utilizing modern web technologies for a responsive
-              design.
-            </ul>
-
-            <p>
-              <strong>AI Resumé Taylor</strong>
-              <span class="project-tech-stack">
-                OpenAI, Python, HTML+CSS, YAML
-              </span>
-            </p>
-            <ul>
-              Built a GenAI full-stack service that utilizes OpenAI to taylor a
-              user's complete career experience to a given job description and
-              produces a filtered resumé.
-            </ul>
-
-            <p>
-              <strong>Mobile Budget Tracker Widgets</strong>
-              <span class="project-tech-stack">
-                Javascript, Google App Scripts, Google Sheets API, Photoshop
-              </span>
-            </p>
-            <ul>
-              Developed Javascript-based iOS widget UI themed after Pokemon,
-              integrating Google Sheets API for budget tracking and spending
-              habit monitoring. Upgrading to React Native for scalability.
-            </ul>
-
-            <p>
-              <strong>BulkUP Ecommerce Platform</strong>
-              <span class="project-tech-stack">
-                React, Redux, MongoDB, Auth0, Express, Stripe, HTML+CSS, Docker
-              </span>
-            </p>
-            <ul>
-              Created a responsive web app to connect restaurateurs with buyers
-              for creating new businesses with dynamic pricing. Led a scrum team
-              of 11 students by managing weekly (Agile) sprints to deliver use
-              case artifacts and business diagrams.
-            </ul>
-          </section>
-
-          <section class="skills">
-            <h2>Technical Skills</h2>
-            <p>
-              <strong>Programming Languages:</strong> TypeScript, JavaScript,
-              C#, Python, HTML5, CSS
-            </p>
-            <p>
-              <strong>Frameworks & Technologies:</strong> Angular, React,
-              Node.js, Express, MongoDB, SQL Server Management Studio, .NET 8.0,
-              Azure Cloud, Flutter, Android Studio, Docker
-            </p>
-          </section>
+              <p>
+                <h3>Peer Pressure</h3>
+                <span className="project-tech-stack">
+                  React, TypeScript, Prisma, PostgreSQL, WebSockets
+                </span>
+              </p>
+              <ul>
+                <li>Developed a real‑time accountability task‑sharing app.</li>
+                <li>Implemented WebSocket‑based real-time updates.</li>
+                <li>Built secure authentication using JWT.</li>
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
     </div>
