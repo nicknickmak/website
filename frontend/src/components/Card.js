@@ -1,3 +1,4 @@
+import React from "react";
 import { playAudio } from "../utils/audioUtils";
 import cardHoverAudio from "../audio/cardHover.mp3";
 import cardClickAudio from "../audio/cardClick.mp3";
@@ -6,10 +7,30 @@ import { useHistory } from "react-router-dom";
 
 export default function Card({ cardData, typeName }) {
   const history = useHistory();
+  // Minimal movement threshold logic
+  const startPos = React.useRef();
+  const moved = React.useRef(false);
+  const THRESHOLD = 10;
 
-  function CardPress() {
+  function handleDown(e) {
+    const p = e.touches ? e.touches[0] : e;
+    startPos.current = { x: p.clientX, y: p.clientY };
+    moved.current = false;
+  }
+  function handleMove(e) {
+    const p = e.touches ? e.touches[0] : e;
+    if (!startPos.current) return;
+    if (
+      Math.abs(p.clientX - startPos.current.x) > THRESHOLD ||
+      Math.abs(p.clientY - startPos.current.y) > THRESHOLD
+    ) {
+      moved.current = true;
+    }
+  }
+  function handleUp() {
+    if (moved.current) return;
     playAudio(cardClickAudio, 1);
-    setTimeout(function () {
+    setTimeout(() => {
       history.push(`/${typeName}/${cardData._id}`);
     }, 700);
   }
@@ -18,9 +39,14 @@ export default function Card({ cardData, typeName }) {
     <div
       key={cardData._id}
       className="card"
-      tabIndex="-1" //this enables the glow to happen when clicked
+      tabIndex="-1"
       onMouseEnter={() => playAudio(cardHoverAudio, 1)}
-      onMouseUp={CardPress}
+      onMouseDown={handleDown}
+      onMouseMove={handleMove}
+      onMouseUp={handleUp}
+      onTouchStart={handleDown}
+      onTouchMove={handleMove}
+      onTouchEnd={handleUp}
     >
       <div className="card-head">
         <img className="card-image" src={cardData.image} alt={cardData.name} />
