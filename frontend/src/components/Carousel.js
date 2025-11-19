@@ -61,13 +61,13 @@ export default function Carousel({ title, isLoading, error, items, typeName }) {
                 </div>
               </Slider>
               <ButtonBack
-                className="buttonBack"
+                className="carouselButton buttonBack"
                 onMouseUp={() => playAudio(cardHoverAudio, 1)}
               >
                 <img src="/images/right_arrow.png" alt="<" />
               </ButtonBack>
               <ButtonNext
-                className="buttonNext"
+                className="carouselButton buttonNext"
                 onMouseUp={() => playAudio(cardHoverAudio, 1)}
               >
                 <img src="/images/right_arrow.png" alt=">" />

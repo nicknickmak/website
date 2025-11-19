@@ -1,39 +1,33 @@
-.buttonBack {
+.carouselButton {
   position: absolute;
   top: 40vh;
-  left: 0;
   height: 10rem;
   width: 5rem;
   transition: all 0.2s ease-in-out;
-  background-color: rgba(102, 102, 102, 0.24);
+  background-color: rgb(219, 219, 219);
   border: transparent;
+  border-radius: 2rem;
 }
-.buttonBack:hover {
+
+.carouselButton img {
+  max-width: 70%;
+}
+
+.carouselButton:hover {
+  border: solid rgb(59, 59, 59) 2px;
   filter: brightness(150%);
 }
 
+.buttonBack {
+  left: 0;
+}
+
 .buttonBack img {
-  max-width: 80%;
   transform: scaleX(-1);
 }
 
 .buttonNext {
-  position: absolute;
-  top: 40vh;
   right: 0;
-  height: 10rem;
-  width: 5rem;
-  transition: all 0.2s ease-in-out;
-  background-color: rgba(102, 102, 102, 0.24);
-  border: transparent;
-}
-
-.buttonNext:hover {
-  filter: brightness(150%);
-}
-
-.buttonNext img {
-  max-width: 80%;
 }
 
 .carousel {
